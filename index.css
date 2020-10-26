@@ -1,0 +1,294 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    align-content: center;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    background-color: #7dacdb;
+    z-index: 5;
+}
+.navbar a {
+    float: left;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+
+.container{
+   
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.container h3{
+    float: left;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 30px;
+    margin-right: 50px;
+    font-family: 'Gochi Hand', cursive;
+    
+    
+}
+
+
+
+.search_bar input{
+    float: left;
+    padding: 6px ;
+    margin-top: 8px;
+    margin-right: 0px;
+    font-size: 17px;
+    border: none;
+    width: 350px;
+    
+}
+
+.search_bar{
+    float: right;
+    
+    
+}
+
+
+.search_bar button{
+    float: left;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 0px;
+    background: #f78fdd;
+    font-size: 17px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.search_bar select{
+    float: left;
+    margin-top: 8px;
+    padding: 7.5px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(255, 250, 180);
+    color: gray;
+
+}
+.search_bar select option{
+    font-weight: bold;
+    background-color:rgb 255, 250, 180;
+    color: gray;
+
+
+}
+
+
+
+
+/* Banner */
+
+.banner{
+    height: 90vh;
+    background-image: url(./Imagens/Banner/20160930okinawa6.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 100px;
+}
+.banner h1{
+    font-size: 80px;
+    /* margin-bottom: 20px; */
+}
+.banner h2{
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 0;
+
+}
+
+
+/* Categorias  */
+
+.categorias_titulo{
+    height: 100px;
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.flex45{
+    flex: 45%;
+    height: 10px;
+}
+.flex10{
+    padding:  0 20px 0 20px;
+    height: 50px;
+    flex: 10%;
+}
+
+.categorias_titulo h1{
+    font-size: 40px;
+    color:  #7dacdb;
+    margin-top: 0;
+}
+
+.borda{
+width: 80%;
+height: 2px;
+margin-top: 20px;
+background-color: rgb(253, 243, 106);  
+border-radius: 35px;
+border: 0;
+
+}
+
+
+.categorias{
+    height: 300px;
+    text-align: center;
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+.img_categoria{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    padding: 30px;
+    cursor: pointer;
+
+}
+.div_overlay{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    transition: .3s ease;
+    position: absolute;
+    top: 863px;
+
+}
+
+.overlay{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: 30px;
+    z-index: 0;
+    transition: .3s ease;
+    opacity: 0;
+    cursor: pointer;
+    color: white    ;
+}
+
+.overlay:hover{
+    opacity: 0.8;
+
+}
+
+.overlay span{
+    position: relative;
+    top: 80px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.teste{
+    background: black;
+    width: 100%;
+    height: 30px    ;
+    display: block;
+}
+
+.destaque_titulo{
+    
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.div_destaques{
+text-align: center;
+background-color:#f5f7f8ce ;
+margin-top: 150px;
+padding-top: 0.1px ;
+height: 500px;
+
+}
+
+.div_destaques h1{
+    font-size: 40px;
+    color: #7dacdb;;
+    margin-top: 0;
+}
+
+.div_cardD{
+    text-align: center;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cardDestaque{
+    
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    margin: 20px;
+
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 270px;
+    box-shadow: 0px 2px 7px -6px #090A09;
+    
+    border-radius: 10px;
+    
+}
+
+.cardDestaque img{
+    position: relative;
+    right: 10px;
+    margin-bottom: 4px;
+    border-radius: 10px 10px 0 0px;
+    width: 220px;
+    height: 190px;
+    /* border-style: solid;
+    border-color: cornflowerblue;
+    border-width: 5px; */
+    /* box-shadow: 0px 0px 11px -5px #1A2DFF; */
+    }
+.cardDestaque span{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 1px;
+
+}
+
+.cardDestaque h4{
+    color: black;
+    margin-top: 5px;
+    font-size: 15px;
+
+}
