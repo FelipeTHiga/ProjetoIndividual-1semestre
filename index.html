@@ -68,28 +68,83 @@
             </div>
         </div>
 
-        <div class="categorias">
-            <img src="./Imagens/Categorias/koto2.jpg" alt="" class="img_categoria" id="koto">
 
-            <img src="./Imagens/Categorias/bingata.jpg" alt="" class="img_categoria" id='bingata'>
 
-            <img src="./Imagens/Categorias/odori2.jpg" alt="" class="img_categoria" id="odori">
 
-            <img src="./Imagens/Categorias/sanshin.jpg" alt="" class="img_categoria" id="sanshin">
+        <div class="display_flex">
 
-            <img src="./Imagens/Categorias/eisa.jpg" alt="" class="img_categoria" id="eisa">
+            <div class="categoria">
+
+                <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);">
+
+                    <div class="circuloOverlay">
+                        <span>Koto</span>
+                    </div>
+
+                </div>
+                <div style="background-color: black; height: 200px;width: 200px; margin: 10px;" class="info"></div>
+
+            </div>
+
+            <div class="categoria">
+
+                <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);">
+
+                    <div class="circuloOverlay">
+                        <span>Bingata</span>
+                    </div>
+
+                </div>
+                <div style="background-color: black; height: 200px;width: 200px; margin: 10px;" class="info"></div>
+
+            </div>
+
+            <div class="categoria">
+
+                <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);" class="info">
+
+                    <div class="circuloOverlay">
+                        <span>Odori</span>
+                    </div>
+
+                </div>
+                <div style="background-color: black; height: 200px;width: 200px;" class="info"></div>
+            </div>
+            <div class="categoria">
+
+                <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);" class="info">
+
+                    <div class="circuloOverlay">
+                        <span>Sanshin</span>
+
+                    </div>
+
+                </div>
+                <div style="background-color: black; height: 200px;width: 200px;" class="info"></div>
+            </div>
+           
+            <div class="categoria">
+
+                <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);">
+
+                    <div class="circuloOverlay" onmouseover="showInfo()" onmouseout="ocultInfo()">
+                        <span>Eisa</span>
+                    </div>
+
+                </div>
+
+                <div class="info" id="info_eisa">
+                    <span>
+                        O eisa é uma dança tradicional acompanhada do toque de tambores, taiko.
+                    </span>
+                </div>
+
+            </div>
+
         </div>
 
-
     </div>
 
-    <div class="div_overlay">
-        <div class="overlay"><span>Koto</span> </div>
-        <div class="overlay"> <span>Bingata</span> </div>
-        <div class="overlay"> <span>Odori</span> </div>
-        <div class="overlay"> <span>Sanshin</span> </div>
-        <div class="overlay"><span>Eisa</span> </div>
-    </div>
     <div class="container">
 
         <hr class="borda">
@@ -120,13 +175,13 @@
         <div class="container">
             <div class="div_cardD">
                 <div class="cardDestaque">
-                    <img src="./Imagens/Destaque/sanshinshop.jpg" >
-               
+                    <img src="./Imagens/Destaque/sanshinshop.jpg">
+
                     <span>Sanshin Shop</span>
                     <h4>Venda de instrumentos</h4>
-               
+
                 </div>
-                
+
                 <div class="cardDestaque">
                     <img src="./Imagens/Destaque/koto.jpg" alt="">
 
@@ -178,3 +233,22 @@
 </body>
 
 </html>
+
+
+<script>
+    function showInfo() {
+        info_eisa.style.display = 'block'
+
+
+    }
+
+    function ocultInfo() {
+        info_eisa.style.display = 'none'
+
+
+    }
+
+
+
+
+</script>
