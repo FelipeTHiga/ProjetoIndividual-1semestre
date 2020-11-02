@@ -147,6 +147,7 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: center;
+    
 }
 
 .categoria{
@@ -181,7 +182,6 @@ body{
     cursor: pointer;
 }
 
-
 .circuloOverlay span{
     position: relative;
     top: 90px;
@@ -190,20 +190,65 @@ body{
 }
 
 .info{
-    display: none;
-    height: 70px;
-    width: 250px;
+    display: flex;
+    height: 0;
+    width: 0;
     background-color: #7dacdb;
     border-radius: 15px;
-    padding-top: 10px;
     font-weight: 700px;
-}
-
-.info span{
     font-weight: 700;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition:  .5s;
+}
+.info span,img{
+    display: inline-block;
 
 }
 
+.icone {
+    height: 70px;
+    /* float: right; */
+    z-index: 2;
+    opacity: 0;
+    position: relative;
+}
+/* Posição dos icones */
+#icon_koto{
+    right: 120px ;
+    bottom: 64px;
+}
+#icon_sanshin{
+    left: 115px;
+    bottom: 60px;
+}
+#icon_eisa{
+    left: 115px;
+    bottom: 43px;
+    transform: scaleX(-1);
+}
+#icon_bingata{
+    right: 10px;
+    width: 270px;
+    height: auto;
+    top: 5px;
+}
+
+
+.circulo:hover + .info{
+    display: block;
+    height: 80px;
+    width: 250px;
+    padding-top: 10px;
+    overflow-x: visible;
+    overflow-y: visible;
+    /* transition: .5s all; */
+}
+.circulo:hover+ .info .icone{
+    opacity: 1;
+    transition: ease-in .8s;  
+}
 
 
 .borda{
@@ -216,9 +261,7 @@ border: 0;
 
 }
 
-
-
-
+/* Destaques */
 
 .destaque_titulo{
     
@@ -264,6 +307,12 @@ height: 500px;
     
     border-radius: 10px;
     
+}
+
+.cardDestaque:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+
 }
 
 .cardDestaque img{
