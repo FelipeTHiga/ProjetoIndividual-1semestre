@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
@@ -19,8 +20,9 @@
             <h3>Yuimaru</h3>
             <a href="">Sobre</a>
             <a href="">Notícias</a>
-            <a href="">Cadastro</a>
-            <a href="">Entrar</a>
+            <a href='#section_banner' onclick="cadastro()">Cadastro</a>
+            <a href="">Navegar</a>
+            <a href="" style="float: right;">Entrar</a>
 
             <div class="search_bar">
                 <select name="" id="">
@@ -29,25 +31,60 @@
                     <option value="">Koto</option>
                     <option value="">Bingata</option>
                     <option value="">Odori</option>
-
                 </select>
                 <input type="text" name="" id="in_pesquisa" placeholder="Pesquisar...">
-                <button><i class="fa fa-search"></i></button>
+                <button class="search_button"><i class="fa fa-search"></i></button>
             </div>
         </div>
     </div>
 
     <!-- Banner -->
-    <div class="banner">
-        <div class="container">
-            <h1>Crie, ensine e compartilhe.</h1>
-            <h2>A plataforma para divulgação de <br>produtos e serviços</h2>
+    <section id="section_banner">
 
+        <div class="banner">
+            <div class="container">
+
+
+                <div id="txt_banner">
+                    <h1>Crie, ensine e compartilhe.</h1>
+                    <h2>A plataforma para divulgação de <br>produtos e serviços</h2>
+                </div>
+
+                <div class="cadastro" id="div_cadastro">
+                    <span class="X_cadastro" onclick="fechar_cadastro()">
+                        <i class="fas fa-times"></i>
+                    </span>
+
+                    <h2><i class="fas fa-user-plus"></i> Cadastro</h2>
+
+                    <hr class="borda" style=" background-color: white; height: 1px;">
+
+                    <div class="icones_cadastro">
+
+
+                        <div class="campos_cadastro">
+                            <i class="fas fa-user"></i><input type="text" name="" id="" placeholder="Nome"> <br>
+
+                            <i class="fas fa-envelope"> </i> <input type="text" name="" id="" placeholder="Email">
+                            <br>
+
+                            <i class="fas fa-mobile-alt"> </i> <input type="text" name="" id="" placeholder="Celular">
+                            <br>
+
+                            <i class="fas fa-lock"> </i> <input type="text" name="" id="" placeholder="Senha">
+                        </div>
+
+                    </div>
+
+                    <button class='btn_cadastrar'>Cadastrar</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- Categorias -->
+    <!-- Título -->
     <div class="container">
 
         <div class="categorias_titulo">
@@ -73,6 +110,7 @@
 
         <div class="display_flex">
 
+            <!-- Koto -->
             <div class="categoria">
 
                 <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);">
@@ -82,18 +120,19 @@
                     </div>
 
                 </div>
-               
+
                 <div class="info">
-                    <span >
-                       O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais tradicionais.
-                     
+                    <span>
+                        O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais
+                        tradicionais.
+
                     </span>
-                    
+
                     <img src="./Imagens/Categorias/Icones/icone koto.png" alt="" class="icone" id="icon_koto">
                 </div>
-                
-            </div>
 
+            </div>
+            <!-- Bingata -->
             <div class="categoria">
 
                 <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);">
@@ -103,17 +142,18 @@
                     </div>
 
                 </div>
-                
+
                 <div class="info">
-                    <span >
-                       O bingata é uma técnica tradicional para o tingimento de kimonos.
-                     
+                    <span>
+                        O bingata é uma técnica tradicional para o tingimento de kimonos.
+
                     </span>
-                    
+
                     <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone" id="icon_bingata">
                 </div>
             </div>
 
+            <!-- Odori  -->
             <div class="categoria">
 
                 <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);" class="info">
@@ -123,17 +163,20 @@
                     </div>
 
                 </div>
-               
+
                 <div class="info">
-                    <span >
-                       O odori ou danças de Okinawa, 
-                    </span> 
-                    
+                    <span>
+                        Odori são danças tradicionais que misturam movimentos, música<br> e significado.
+                    </span>
+
                     <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori">
-                    
+                    <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori2">
+
                 </div>
 
             </div>
+
+            <!-- Sanshin  -->
             <div class="categoria">
 
                 <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);" class="info">
@@ -149,30 +192,31 @@
                     <span>
                         O sanshin é o instrumento caracteristíco de Okinawa, esta presente em grande parte das músicas
                     </span>
-                    
-                    <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone"id="icon_sanshin">
+
+                    <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone" id="icon_sanshin">
                 </div>
-                
+
             </div>
-           
+
+            <!-- Eisa  -->
             <div class="categoria">
 
                 <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);">
 
-                    <div class="circuloOverlay" >
+                    <div class="circuloOverlay">
                         <span>Eisa</span>
                     </div>
 
                 </div>
 
                 <div class="info">
-                    <span >
-                        O eisa é uma dança tradicional acompanhada do toque de tambores, taiko.
+                    <span>
+                        O eisa é uma dança tradicional com tambores, taiko, acompanhada de melodias <br> do sanshin.
                     </span>
-                  
+
                     <img src="./Imagens/Categorias/Icones/icone eisa.png" alt="" class="icone" id="icon_eisa">
                 </div>
-                
+
             </div>
 
         </div>
@@ -197,7 +241,7 @@
 
             <div class="flex10">
 
-                <h1>Destaques</h1> 
+                <h1>Destaques</h1>
             </div>
 
             <div class="flex45">
@@ -247,20 +291,17 @@
                     <h4>Aulas particulares</h4>
 
                 </div>
+            </div>
+            <hr class="borda" style="background-color: #7dacdb; align-self: center;">
+        </div>
+
+        <div class="container">
+            <div class="popup">
 
 
 
             </div>
-
         </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -270,12 +311,17 @@
 
 
 <script>
-    function showInfo() {
-        info_eisa.style.display = 'block'
+    function cadastro() {
+        txt_banner.style.transition = "0.5s"
+        txt_banner.style.opacity = 0
+        div_cadastro.style.opacity = 1
     }
 
-    function ocultInfo() {
-        info_eisa.style.display = 'none'
+    function fechar_cadastro() {
+        txt_banner.style.transition = " ease-in 0.5s"
+        txt_banner.style.opacity = 1
+        div_cadastro.style.opacity = 0
+
     }
 
 

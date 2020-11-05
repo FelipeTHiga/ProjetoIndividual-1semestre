@@ -9,7 +9,7 @@ body{
     position: fixed;
     width: 100%;
     background-color: #7dacdb;
-    z-index: 5;
+    z-index: 10;
 }
 .navbar a {
     float: left;
@@ -42,25 +42,41 @@ body{
     
 }
 
+.search_bar{
+    float: right;
+    transition: 0.7s;
+}
+
+.search_bar:hover button{
+    border-radius: 0 10px 10px 0;
+    transition: ease-out 1.7s;
+    
+}
+.search_bar:hover input{
+    width: 350px;
+    transition: .7s;
+    padding: 6px;
+}
+.search_bar:hover select{
+    width: auto;
+    padding: 7.5px;
+    transition: .7s;
+}
+
+
 
 
 .search_bar input{
     float: left;
-    padding: 6px ;
     margin-top: 8px;
     margin-right: 0px;
+    padding: 0;
     font-size: 17px;
     border: none;
-    width: 350px;
-    
+    width: 0px;
+    overflow: hidden;
+    transition: 0.7s
 }
-
-.search_bar{
-    float: right;
-    
-    
-}
-
 
 .search_bar button{
     float: left;
@@ -70,28 +86,28 @@ body{
     background: #f78fdd;
     font-size: 17px;
     border: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 50%;
     cursor: pointer;
     color: white;
+    transition: 0.7s
 }
 
 .search_bar select{
     float: left;
     margin-top: 8px;
-    padding: 7.5px;
+    padding: 0;
+    width: 0;
     border-radius: 10px 0px 0px 10px;
     border: none;
     font-weight: bold;
     background-color: rgb(255, 250, 180);
     color: gray;
-
+    transition: 0.7s
 }
 .search_bar select option{
     font-weight: bold;
     background-color:rgb 255, 250, 180;
     color: gray;
-
-
 }
 
 /* Banner */
@@ -106,14 +122,100 @@ body{
 .banner h1{
     font-size: 80px;
     /* margin-bottom: 20px; */
+    z-index: 0;
 }
 .banner h2{
     font-size: 40px;
     font-weight: 100;
     margin-top: 0;
+    z-index: 0;
+
 
 }
 
+/* Cadastro */
+.cadastro{
+    position: relative;
+    height: 400px;
+    width: 520px;
+    padding-top: 20px;
+    z-index: 9;
+    background-color: rgba(255, 255, 255, 0.247);
+    bottom: 350px;
+    opacity: 0;
+    transition: ease-in 0.5s;
+    border-radius: 15px;
+    text-align: center;
+
+    
+    
+}
+.cadastro h2{
+    font-size: 25px;
+    font-weight: 300px;
+    margin-top: 0;
+    z-index: 0;
+}
+
+.cadastro i{
+    font-size: 24px;
+}
+
+.icones_cadastro{
+    text-align: center;
+    float: left;
+}
+
+.icones_cadastro i{
+    font-size: 22px;
+    padding: 20px 10px 5px 50px;
+}
+
+.campos_cadastro input{
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 29px;
+    margin-bottom: 9px;
+    background-color:rgba(255, 255, 255, 0);
+    color: white;
+    width: 340px;
+}
+
+.campos_cadastro input:focus{
+    outline: none;
+}
+.campos_cadastro input::placeholder{
+    color: white;
+}
+
+/* .campos_cadastro{
+    float: left;
+    text-align: center;
+    padding: 10px ;
+    align-items: flex-start;
+} */
+
+.btn_cadastrar{
+    background-color: #f78fdd;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer;
+
+    margin-top: 27px;
+
+
+}
+
+.X_cadastro{
+    position: relative;
+    float: right;
+    padding-right: 30px;
+    cursor: pointer;
+}
 
 /* Categorias  */
 
@@ -122,8 +224,7 @@ body{
     text-align: center;
     margin-top: 100px;
     display: flex;
-    flex-direction: row;
-
+  align-self: center;
 }
 
 
@@ -195,7 +296,6 @@ body{
     width: 0;
     background-color: #7dacdb;
     border-radius: 15px;
-    font-weight: 700px;
     font-weight: 700;
     text-align: center;
     overflow-x: hidden;
@@ -217,15 +317,15 @@ body{
 /* Posição dos icones */
 #icon_koto{
     right: 120px ;
-    bottom: 64px;
+    bottom: 62px;
 }
 #icon_sanshin{
     left: 115px;
     bottom: 60px;
 }
 #icon_eisa{
-    left: 115px;
-    bottom: 43px;
+    left: 123px;
+    bottom: 60px;
     transform: scaleX(-1);
 }
 #icon_bingata{
@@ -234,13 +334,26 @@ body{
     height: auto;
     top: 5px;
 }
+#icon_odori{
+    left: 160px;
+    bottom: 45px;
+}
+#icon_odori2{
+    right: 160px;
+    bottom: 45px;
+    transform: scaleX(-1);
+
+}
+
 
 
 .circulo:hover + .info{
     display: block;
-    height: 80px;
+    height: 85px;
     width: 250px;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     overflow-x: visible;
     overflow-y: visible;
     /* transition: .5s all; */
