@@ -38,270 +38,318 @@
         </div>
     </div>
 
-    <!-- Banner -->
-    <section id="section_banner">
+    <div class="blur" id="main" onclick="close_popup()">
+        <!-- Banner -->
+        <section id="section_banner">
 
-        <div class="banner">
-            <div class="container">
+            <div class="banner">
+                <div class="container">
 
 
-                <div id="txt_banner">
-                    <h1>Crie, ensine e compartilhe.</h1>
-                    <h2>A plataforma para divulgação de <br>produtos e serviços</h2>
+                    <div id="txt_banner">
+                        <h1>Crie, ensine e compartilhe.</h1>
+                        <h2>A plataforma para divulgação de <br>produtos e serviços</h2>
+                    </div>
+
+                    <div class="cadastro" id="div_cadastro">
+                        <span class="X_cadastro" onclick="fechar_cadastro()">
+                            <i class="fas fa-times"></i>
+                        </span>
+
+                        <h2><i class="fas fa-user-plus"></i> Cadastro</h2>
+
+                        <hr class="borda" style=" background-color: white; height: 1px;">
+
+                        <div class="icones_cadastro">
+
+
+                            <div class="campos_cadastro">
+                                <i class="fas fa-user"></i><input type="text" name="" id="" placeholder="Nome"> <br>
+
+                                <i class="fas fa-envelope"> </i> <input type="text" name="" id="" placeholder="Email">
+                                <br>
+
+                                <i class="fas fa-mobile-alt"> </i> <input type="text" name="" id=""
+                                    placeholder="Celular">
+                                <br>
+
+                                <i class="fas fa-lock"> </i> <input type="text" name="" id="" placeholder="Senha">
+                            </div>
+
+                        </div>
+
+                        <button class='btn_cadastrar'>Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Categorias -->
+        <!-- Título -->
+
+        <div class="container">
+
+            <div class="categorias_titulo">
+                <div class="flex45">
+                    <hr class="borda" style="margin-right:10px">
+
                 </div>
 
-                <div class="cadastro" id="div_cadastro">
-                    <span class="X_cadastro" onclick="fechar_cadastro()">
-                        <i class="fas fa-times"></i>
-                    </span>
+                <div class="flex10">
 
-                    <h2><i class="fas fa-user-plus"></i> Cadastro</h2>
-
-                    <hr class="borda" style=" background-color: white; height: 1px;">
-
-                    <div class="icones_cadastro">
+                    <h1>Categorias</h1>
+                </div>
 
 
-                        <div class="campos_cadastro">
-                            <i class="fas fa-user"></i><input type="text" name="" id="" placeholder="Nome"> <br>
+                <div class="flex45">
+                    <hr class="borda" style="margin-left:10px">
 
-                            <i class="fas fa-envelope"> </i> <input type="text" name="" id="" placeholder="Email">
-                            <br>
+                </div>
+            </div>
 
-                            <i class="fas fa-mobile-alt"> </i> <input type="text" name="" id="" placeholder="Celular">
-                            <br>
 
-                            <i class="fas fa-lock"> </i> <input type="text" name="" id="" placeholder="Senha">
+
+
+            <div class="display_flex">
+
+                <!-- Koto -->
+                <div class="categoria">
+
+                    <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);">
+
+                        <div class="circuloOverlay">
+                            <span>Koto</span>
                         </div>
 
                     </div>
 
-                    <button class='btn_cadastrar'>Cadastrar</button>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="info">
+                        <span>
+                            O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais
+                            tradicionais.
 
+                        </span>
 
-    <!-- Categorias -->
-    <!-- Título -->
-    <div class="container">
-
-        <div class="categorias_titulo">
-            <div class="flex45">
-                <hr class="borda" style="margin-right:10px">
-
-            </div>
-
-            <div class="flex10">
-
-                <h1>Categorias</h1>
-            </div>
-
-
-            <div class="flex45">
-                <hr class="borda" style="margin-left:10px">
-
-            </div>
-        </div>
-
-
-
-
-        <div class="display_flex">
-
-            <!-- Koto -->
-            <div class="categoria">
-
-                <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);">
-
-                    <div class="circuloOverlay">
-                        <span>Koto</span>
+                        <img src="./Imagens/Categorias/Icones/icone koto.png" alt="" class="icone" id="icon_koto">
                     </div>
 
                 </div>
+                <!-- Bingata -->
+                <div class="categoria">
 
-                <div class="info">
-                    <span>
-                        O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais
-                        tradicionais.
+                    <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);">
 
-                    </span>
+                        <div class="circuloOverlay">
+                            <span>Bingata</span>
+                        </div>
 
-                    <img src="./Imagens/Categorias/Icones/icone koto.png" alt="" class="icone" id="icon_koto">
-                </div>
-
-            </div>
-            <!-- Bingata -->
-            <div class="categoria">
-
-                <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);">
-
-                    <div class="circuloOverlay">
-                        <span>Bingata</span>
                     </div>
 
+                    <div class="info">
+                        <span>
+                            O bingata é uma técnica tradicional para o tingimento de kimonos.
+
+                        </span>
+
+                        <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone" id="icon_bingata">
+                    </div>
                 </div>
 
-                <div class="info">
-                    <span>
-                        O bingata é uma técnica tradicional para o tingimento de kimonos.
+                <!-- Odori  -->
+                <div class="categoria">
 
-                    </span>
+                    <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);" class="info">
 
-                    <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone" id="icon_bingata">
-                </div>
-            </div>
+                        <div class="circuloOverlay">
+                            <span>Odori</span>
+                        </div>
 
-            <!-- Odori  -->
-            <div class="categoria">
-
-                <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);" class="info">
-
-                    <div class="circuloOverlay">
-                        <span>Odori</span>
                     </div>
 
-                </div>
+                    <div class="info">
+                        <span>
+                            Odori são danças tradicionais que misturam movimentos, música<br> e significado.
+                        </span>
 
-                <div class="info">
-                    <span>
-                        Odori são danças tradicionais que misturam movimentos, música<br> e significado.
-                    </span>
-
-                    <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori">
-                    <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori2">
-
-                </div>
-
-            </div>
-
-            <!-- Sanshin  -->
-            <div class="categoria">
-
-                <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);" class="info">
-
-                    <div class="circuloOverlay">
-                        <span>Sanshin</span>
+                        <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori">
+                        <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori2">
 
                     </div>
 
                 </div>
 
-                <div class="info">
-                    <span>
-                        O sanshin é o instrumento caracteristíco de Okinawa, esta presente em grande parte das músicas
-                    </span>
+                <!-- Sanshin  -->
+                <div class="categoria">
 
-                    <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone" id="icon_sanshin">
-                </div>
+                    <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);" class="info">
 
-            </div>
+                        <div class="circuloOverlay">
+                            <span>Sanshin</span>
 
-            <!-- Eisa  -->
-            <div class="categoria">
+                        </div>
 
-                <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);">
+                    </div>
 
-                    <div class="circuloOverlay">
-                        <span>Eisa</span>
+                    <div class="info">
+                        <span>
+                            O sanshin é o instrumento caracteristíco de Okinawa, esta presente em grande parte das
+                            músicas
+                        </span>
+
+                        <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone" id="icon_sanshin">
                     </div>
 
                 </div>
 
-                <div class="info">
-                    <span>
-                        O eisa é uma dança tradicional com tambores, taiko, acompanhada de melodias <br> do sanshin.
-                    </span>
+                <!-- Eisa  -->
+                <div class="categoria">
 
-                    <img src="./Imagens/Categorias/Icones/icone eisa.png" alt="" class="icone" id="icon_eisa">
+                    <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);">
+
+                        <div class="circuloOverlay">
+                            <span>Eisa</span>
+                        </div>
+
+                    </div>
+
+                    <div class="info">
+                        <span>
+                            O eisa é uma dança tradicional com tambores, taiko, acompanhada de melodias <br> do sanshin.
+                        </span>
+
+                        <img src="./Imagens/Categorias/Icones/icone eisa.png" alt="" class="icone" id="icon_eisa">
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <hr class="borda">
-
-    </div>
-
-
-
-    <div class="div_destaques">
-
-        <div class="destaque_titulo">
-            <div class="flex45">
-                <hr class="borda" style="margin-right:10px; background-color: #7dacdb;">
-
-            </div>
-
-            <div class="flex10">
-
-                <h1>Destaques</h1>
-            </div>
-
-            <div class="flex45">
-                <hr class="borda" style="margin-left:10px;background-color: #7dacdb;">
-
-            </div>
         </div>
 
         <div class="container">
-            <div class="div_cardD">
-                <div class="cardDestaque">
+
+            <hr class="borda">
+
+        </div>
+
+
+
+        <div class="div_destaques">
+
+            <div class="destaque_titulo">
+                <div class="flex45">
+                    <hr class="borda" style="margin-right:10px; background-color: #7dacdb;">
+
+                </div>
+
+                <div class="flex10">
+
+                    <h1>Destaques</h1>
+                </div>
+
+                <div class="flex45">
+                    <hr class="borda" style="margin-left:10px;background-color: #7dacdb;">
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="div_cardD">
+                    <div class="cardDestaque" onclick="open_popup()">
+                        <img src="./Imagens/Destaque/sanshinshop.jpg">
+
+                        <span>Sanshin Shop</span>
+                        <h4>Venda de instrumentos</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/koto.jpg" alt="">
+
+                        <span>Akiko Oshiro</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/taiko.jpg" alt="">
+
+                        <span>Taiko Center</span>
+                        <h4>Venda de instrumentos</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/bingata.jpg" alt="">
+
+                        <span>Aho Studio</span>
+                        <h4>Venda de artesanatos</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/sanshinclass.jpg" alt="">
+
+                        <span>Luiz Chibana</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+                </div>
+                <hr class="borda" style="background-color: #7dacdb; align-self: center;">
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="container" id="div_popup">
+        <div class="popup">
+
+
+            <div class="popup_content">
+
+
+                <div class="popup_titulo">
+                    <h1>
+                        Sanshin Shop
+                    </h1>
+                    <h4>
+                        Venda de instrumentos
+                    </h4>
+
+                    <h5 style="width:250px;text-align: justify; ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Cras fermentum odio eu feugiat pretium nibh. Nulla malesuada
+                        pellentesque elit eget gravida cum. Est sit amet facilisis magna etiam tempor orci eu
+                        lobortis. Laoreet non curabitur gravida arcu. Dui vivamus arcu felis bibendum ut tristique
+                        et egestas quis. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
+                    </h5>
+                </div>
+                <div class="popup_imgPerfil">
                     <img src="./Imagens/Destaque/sanshinshop.jpg">
-
-                    <span>Sanshin Shop</span>
-                    <h4>Venda de instrumentos</h4>
-
                 </div>
 
-                <div class="cardDestaque">
-                    <img src="./Imagens/Destaque/koto.jpg" alt="">
+                <div class="contato" style="width: 100%; height: 300px;">
+                    <div class="rede">
+                        <h2><i class="fab fa-facebook"></i> Sanshinshop</h2>
+                    </div>
 
-                    <span>Akiko Oshiro</span>
-                    <h4>Aulas particulares</h4>
+                    <div class="rede">
+                        <h2><i class="fab fa-whatsapp"></i> (11)94655-8476</h2>
+                    </div>
 
-                </div>
-
-                <div class="cardDestaque">
-                    <img src="./Imagens/Destaque/taiko.jpg" alt="">
-
-                    <span>Taiko Center</span>
-                    <h4>Venda de instrumentos</h4>
-
-                </div>
-
-                <div class="cardDestaque">
-                    <img src="./Imagens/Destaque/bingata.jpg" alt="">
-
-                    <span>Aho Studio</span>
-                    <h4>Venda de artesanatos</h4>
+                    <div class="rede">
+                        <h2><i class="fab fa-instagram"></i> Sanshin_shop</h2>
+                    </div>
 
                 </div>
-
-                <div class="cardDestaque">
-                    <img src="./Imagens/Destaque/sanshinclass.jpg" alt="">
-
-                    <span>Luiz Chibana</span>
-                    <h4>Aulas particulares</h4>
-
-                </div>
-            </div>
-            <hr class="borda" style="background-color: #7dacdb; align-self: center;">
-        </div>
-
-        <div class="container">
-            <div class="popup">
 
 
 
             </div>
         </div>
+    </div>
 
 
 
@@ -311,6 +359,8 @@
 
 
 <script>
+    var delay = 0
+
     function cadastro() {
         txt_banner.style.transition = "0.5s"
         txt_banner.style.opacity = 0
@@ -325,6 +375,25 @@
     }
 
 
+    function open_popup() {
+
+        main.style.filter = 'blur(5px)';
+        div_popup.style.display = 'block';
+
+        setTimeout(function () {
+            delay = 1
+        }, 500)
+    }
+
+    function close_popup() {
+
+
+        if (delay == 1) {
+            main.style.filter = 'blur(0)';
+            div_popup.style.display = 'none';
+            delay = 0
+        }
+    }
 
 
 </script>
