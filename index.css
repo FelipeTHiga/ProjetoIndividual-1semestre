@@ -561,3 +561,40 @@ height: 500px;
 padding-top: 10px;
 padding-bottom: 20px;
 }
+
+
+/* Footer */
+
+.footer{
+    background-color: #7dacdb;
+    height: 230px;
+    border-top:10px solid;
+    border-color: #f78fdd ;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer .desc{
+    padding-top: 20px;
+    width: 33%;
+    text-align: center;
+
+}
+
+.desc h3{
+    float: none;
+    margin: 0;
+    /* text-align: left; */
+}
+
+.desc button{
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 5px;
+
+}
