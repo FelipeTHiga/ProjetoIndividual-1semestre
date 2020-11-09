@@ -159,7 +159,7 @@ body{
 .main{
     margin: 0px 0;
     display: flex;
-    background-image: url(./Imagens/Banner/banner1.jpg);
+    background-image: url(./Imagens/Banner/banner1.png);
     background-size: cover;
     background-attachment: fixed;
     z-index: 10;

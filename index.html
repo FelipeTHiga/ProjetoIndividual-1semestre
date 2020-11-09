@@ -18,11 +18,28 @@
     <div class="navbar">
         <div class="container">
             <h3>Yuimaru</h3>
-            <a href="">Sobre</a>
+            <a href="./index.html">Home</a>
             <a href="">Notícias</a>
             <a href='#section_banner' onclick="cadastro()">Cadastro</a>
-            <a href="">Navegar</a>
-            <a href="" style="float: right;">Entrar</a>
+            <a href="./Navegar.html">Navegar</a>
+
+            <div class="login">
+
+                <a href="#section_banner'" style="float: right;" onclick="entrar()">Entrar</a>
+
+                <div class="login_popup" id="div_login">
+                    <form id="form_login">
+                        <input type="email" name="" id="" placeholder="Email"> <i class="fas fa-user"></i>
+                        <br><br>
+                        <input type="password" name="" id="" placeholder="Senha"> <i class="fas fa-lock"></i>
+                        <br>
+
+                        <button>Entrar</button>
+                        <u>Esqueceu sua senha?</u>
+
+                    </form>
+                </div>
+            </div>
 
             <div class="search_bar">
                 <select name="" id="">
@@ -37,6 +54,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <div class="blur" id="main" onclick="close_popup()">
         <!-- Banner -->
@@ -84,159 +104,179 @@
 
                             <button class='btn_cadastrar' type="submit">Cadastrar</button>
                         </form>
+                        <div class="cadastro_txt">
+                            <h1>Faça parte da comunidade!</h1>
+                            <h2>A utilização da plataforma e todos os seus serviços é 100% gratuita!
+                            </h2>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
 
+
+
         <!-- Categorias -->
         <!-- Título -->
 
-        <div class="container">
+        <div style="background-color: white;">
 
-            <div class="categorias_titulo">
-                <div class="flex45">
-                    <hr class="borda" style="margin-right:10px">
+            <div class="container">
+
+                <div class="categorias_titulo">
+                    <div class="flex45">
+                        <hr class="borda" style="margin-right:10px">
+
+                    </div>
+
+                    <div class="flex10">
+
+                        <h1>Categorias</h1>
+                    </div>
+
+
+                    <div class="flex45">
+                        <hr class="borda" style="margin-left:10px">
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="display_flex">
+
+                    <!-- Koto -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);">
+
+                            <div class="circuloOverlay">
+                                <span>Koto</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais
+                                tradicionais.
+
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone koto.png" alt="" class="icone" id="icon_koto">
+                        </div>
+
+                    </div>
+                    <!-- Bingata -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);">
+
+                            <div class="circuloOverlay">
+                                <span>Bingata</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O bingata é uma técnica tradicional para o tingimento de kimonos.
+
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone"
+                                id="icon_bingata">
+                        </div>
+                    </div>
+
+                    <!-- Odori  -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);"
+                            class="info">
+
+                            <div class="circuloOverlay">
+                                <span>Odori</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                Odori são danças tradicionais que misturam movimentos, música<br> e significado.
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori">
+                            <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone"
+                                id="icon_odori2">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Sanshin  -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);"
+                            class="info">
+
+                            <div class="circuloOverlay">
+                                <span>Sanshin</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O sanshin é o instrumento caracteristíco de Okinawa, esta presente em grande parte das
+                                músicas
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone"
+                                id="icon_sanshin">
+                        </div>
+
+                    </div>
+
+                    <!-- Eisa  -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);">
+
+                            <div class="circuloOverlay">
+                                <span>Eisa</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O eisa é uma dança tradicional com tambores, taiko, acompanhada de melodias <br> do
+                                sanshin.
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone eisa.png" alt="" class="icone" id="icon_eisa">
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <div class="flex10">
-
-                    <h1>Categorias</h1>
-                </div>
-
-
-                <div class="flex45">
-                    <hr class="borda" style="margin-left:10px">
-
-                </div>
             </div>
 
+            <div class="container" style="margin-bottom: 50px;">
 
-
-
-            <div class="display_flex">
-
-                <!-- Koto -->
-                <div class="categoria">
-
-                    <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);">
-
-                        <div class="circuloOverlay">
-                            <span>Koto</span>
-                        </div>
-
-                    </div>
-
-                    <div class="info">
-                        <span>
-                            O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais
-                            tradicionais.
-
-                        </span>
-
-                        <img src="./Imagens/Categorias/Icones/icone koto.png" alt="" class="icone" id="icon_koto">
-                    </div>
-
-                </div>
-                <!-- Bingata -->
-                <div class="categoria">
-
-                    <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);">
-
-                        <div class="circuloOverlay">
-                            <span>Bingata</span>
-                        </div>
-
-                    </div>
-
-                    <div class="info">
-                        <span>
-                            O bingata é uma técnica tradicional para o tingimento de kimonos.
-
-                        </span>
-
-                        <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone" id="icon_bingata">
-                    </div>
-                </div>
-
-                <!-- Odori  -->
-                <div class="categoria">
-
-                    <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);" class="info">
-
-                        <div class="circuloOverlay">
-                            <span>Odori</span>
-                        </div>
-
-                    </div>
-
-                    <div class="info">
-                        <span>
-                            Odori são danças tradicionais que misturam movimentos, música<br> e significado.
-                        </span>
-
-                        <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori">
-                        <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori2">
-
-                    </div>
-
-                </div>
-
-                <!-- Sanshin  -->
-                <div class="categoria">
-
-                    <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);" class="info">
-
-                        <div class="circuloOverlay">
-                            <span>Sanshin</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="info">
-                        <span>
-                            O sanshin é o instrumento caracteristíco de Okinawa, esta presente em grande parte das
-                            músicas
-                        </span>
-
-                        <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone" id="icon_sanshin">
-                    </div>
-
-                </div>
-
-                <!-- Eisa  -->
-                <div class="categoria">
-
-                    <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);">
-
-                        <div class="circuloOverlay">
-                            <span>Eisa</span>
-                        </div>
-
-                    </div>
-
-                    <div class="info">
-                        <span>
-                            O eisa é uma dança tradicional com tambores, taiko, acompanhada de melodias <br> do sanshin.
-                        </span>
-
-                        <img src="./Imagens/Categorias/Icones/icone eisa.png" alt="" class="icone" id="icon_eisa">
-                    </div>
-
-                </div>
+                <hr class="borda">
 
             </div>
-
         </div>
 
-        <div class="container">
-
-            <hr class="borda">
-
-        </div>
+        
 
         <!-- Destaques -->
 
@@ -309,50 +349,74 @@
 
 
 
+        <div class="patrocinadores">
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-          
-            <div class="desc">
-                <h3> Yuimaru</h3>
-                <p> Uma plataforma gratuita para divulgar, descobrir e aprender.</p>
+            <h1>Patrocinadores: </h1>
 
-                <img src="./Imagens/Banner/shisapinkpng.png" style="height: 100px">
-                
-            </div>
-         
-            <div class="desc" >
-                <h3 >Contato</h3>
-
-                <p >
-                    <b>Telefone</b><br>
-                    (11)-94823-4029 <br> <br>
-
-
-                    <b >Email</b> <br>
-                    yuimaru_contato@gmail.com <br> <br>
-
-
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"> </i>
-                    <i class="fab fa-youtube"> </i>
-                </p>
+            <div>
+                <img src="./Imagens/Patrocinadores/oniguiri.jpg" alt="">
             </div>
 
-            <div class="desc" >
-                <h3 style="margin-bottom: 12px;">Deixe sua sugestão</h3>
-                <form>
-                    <input type="text" placeholder="Digite seu email" > <br> <br>
-                    <input type="text" style="height: 70px;"> <br>
-                    <button type="submit"> Enviar </button>
-                </form>
+
+            <div>
+                <img src="./Imagens/Patrocinadores/aokb.png" alt="">
+            </div>
+
+            <div>
+                <img src="./Imagens/Patrocinadores/okinalar.png" alt="">
+            </div>
+            <div>
+                <img src="./Imagens/Patrocinadores/utinastore.jpg" alt="">
             </div>
 
         </div>
-    </div>
 
-</div>
+
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+
+                <div class="desc">
+                    <h3> Yuimaru</h3>
+                    <p> Uma plataforma gratuita para divulgar, descobrir e aprender.</p>
+
+                    <img src="./Imagens/Banner/shisapinkpng.png" style="height: 100px">
+
+                </div>
+
+                <div class="desc">
+                    <h3>Contato</h3>
+
+                    <p>
+                        <b>Telefone</b><br>
+                        (11)-94823-4029 <br> <br>
+
+
+                        <b>Email</b> <br>
+                        yuimaru_contato@gmail.com <br> <br>
+
+
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"> </i>
+                        <i class="fab fa-youtube"> </i>
+                    </p>
+                </div>
+
+                <div class="desc">
+                    <h3 style="margin-bottom: 12px;">Deixe sua sugestão</h3>
+                    <form>
+                        <input type="text" placeholder="Digite seu email"> <br> <br>
+                        <input type="text" style="height: 70px;"> <br>
+                        <button type="submit"> Enviar </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     <div class="container" id="div_popup">
         <div class="popup">
@@ -420,7 +484,22 @@
 
                 </div>
 
+                <h1 style="color: black; float: left; padding-left: 50px; width: 100%;text-align: left; margin-top: 50px; ">Contate:</h1>
 
+                <div class="mensagem">
+                    
+
+                    <div>
+                        Email: <br>
+                        <input type="email" placeholder="Seu Email"> <br><br>
+                        Nome: <br>
+                        <input type="text" placeholder="Seu nome"> <br><br>
+                        <input type="text" class="recado" placeholder="Sua mensagem...">
+
+                        <button>Enviar</button>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -434,6 +513,7 @@
 
 <script>
     var delay = 0
+    var ativo = 0
 
     function cadastro() {
         txt_banner.style.transition = "0.5s"
@@ -446,6 +526,20 @@
         txt_banner.style.opacity = 1
         div_cadastro.style.opacity = 0
 
+    }
+
+    function entrar() {
+        if (ativo == 0) {
+            document.getElementById('div_login').style = 'height: 130px; padding: 8px 0; visibility: visible;';
+            document.getElementById('form_login').style = 'opacity:1';
+            ativo = 1
+        }
+
+        else {
+            document.getElementById('div_login').style = 'height: 0; padding: 0 0; visibility: hidden;';
+            document.getElementById('form_login').style = 'opacity:0; transition: 0.3s;';
+            ativo = 0
+        }
     }
 
 

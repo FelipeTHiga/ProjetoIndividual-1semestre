@@ -45,6 +45,8 @@ body{
 .search_bar{
     float: right;
     transition: 0.7s;
+    position: relative;
+    left: 70px;
 }
 
 .search_bar:hover button{
@@ -62,9 +64,6 @@ body{
     padding: 7.5px;
     transition: .7s;
 }
-
-
-
 
 .search_bar input{
     float: left;
@@ -132,6 +131,79 @@ body{
 
 
 }
+/* Login */
+.login{
+    position: relative;
+    float: right;
+}
+
+.login_popup{
+    visibility: hidden;
+    height: 0;
+    width: 230px;
+    background-color:  white;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0 0;
+    position: relative;
+    z-index: 1;
+    top: 45px;
+    right: 20px;
+    margin-left: -80px;
+    transition: 0.7s;
+    box-shadow: -2px 5px 15px -3px rgba(0,0,0,0.7);
+    border-bottom: 10px solid #7dacdb;
+    color: #7dacdb;
+}
+
+
+
+.login .login_popup::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: 70px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent  white transparent;
+}
+
+.login_popup u{
+    color: #7dacdb;
+    font-size: 14px;
+}
+
+
+.login_popup form{
+    position: relative;
+    bottom: 30px;
+    opacity: 0;
+    transition: ease-in 1s;
+}
+.login_popup input{
+    background-color:rgb(255, 255, 255);
+    color: #7dacdb;
+    border-radius: 5px;
+    height: 25px;
+    border: 2px solid;
+}
+
+.login_popup button{
+    background-color: #f78fdd;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 50px;
+    padding: 5px 5px 5px 5px;
+
+}
+
 
 /* Cadastro */
 .cadastro{
@@ -216,6 +288,27 @@ body{
     padding-right: 30px;
     cursor: pointer;
 }
+
+.cadastro_txt{
+    position: relative;
+    bottom: 300px;
+    left:650px;
+}
+.cadastro h1{
+    font-size: 40px;
+    /* margin-bottom: 20px; */
+    margin-bottom: 10px;
+    z-index: 0;
+}
+.cadastro h2{
+    font-size: 21px;
+    font-weight: 100;
+    margin-top: 0;
+    z-index: 0;
+
+
+}
+
 
 /* Categorias  */
 
@@ -386,9 +479,10 @@ border: 0;
 
 .div_destaques{
 text-align: center;
-background-color:#f5f7f8ce ;
+background-image: linear-gradient( #ffffff,#a5d2e9ce);
+
 margin-top: 150px;
-padding-top: 0.1px ;
+padding-top: 50px ;
 height: 500px;
 
 }
@@ -413,7 +507,7 @@ height: 500px;
     padding: 0 10px;
     margin: 20px;
 
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(255, 254, 254);
     width: 200px;
     height: 270px;
     box-shadow: -2px 5px 15px -3px rgba(0,0,0,0.7);
@@ -494,7 +588,8 @@ height: 500px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.795);
     width: 85%;
-    height: 1000px;
+    height: 1500px;
+ 
     
 }
 
@@ -550,6 +645,7 @@ height: 500px;
     width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    height: 400px;
    }
 
 /* .img_galeria {
@@ -561,6 +657,52 @@ height: 500px;
 padding-top: 10px;
 padding-bottom: 20px;
 }
+.mensagem{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: black;
+}
+
+.mensagem div{
+    background-color: rgba(255, 255, 255, 0.747);
+    width: 56%;
+    padding: 30px 0 30px 0;
+    border-radius: 7px;
+    border-top: solid #7dacdb 5px;
+    border-bottom: solid #7dacdb 5px;
+    height: 283px
+}
+
+.mensagem input{
+    background-color:rgb(255, 255, 255);
+    color: #7dacdb;
+    border-radius: 5px;
+    height: 25px;
+    border: 2px solid;
+    width: 400px;
+
+}
+.recado{
+    background-color:rgb(255, 255, 255);
+    color: #7dacdb;
+    border-radius: 5px;
+    /* height: 100px !important; */
+    padding: 0 0 90px 0;
+    border: 2px solid;
+    width: 150px;
+}
+
+.mensagem button{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: #9cbfe2;
+    margin: 12px 0;
+}
+
+
+
 
 
 /* Footer */
@@ -596,5 +738,26 @@ padding-bottom: 20px;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
     margin-top: 5px;
+
+}
+
+
+.patrocinadores{
+    background-color: #fae2ef;
+    /* background-image: linear-gradient( #ffffff,#a5d2e9ce); */
+    height: 60vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.patrocinadores img{
+    height: 150px;
+    width: 180px;
+    border-radius: 8%;
 
 }
