@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    align-content: center;
+    height: 50px;
+    /* position: fixed; */
+    width: 100%;
+    background-color: #7dacdb;
+    z-index: 10;
+}
+.navbar a {
+    float: left;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+
+.container{
+   
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+
+.container h3{
+    float: left;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 30px;
+    margin-right: 50px;
+    font-family: 'Gochi Hand', cursive;
+    
+    
+}
+
+
+.main{
+    height: 145vh;
+    background-image: linear-gradient(#6e9bc7, #d6e4f1);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 155px;
+
+    /* padding-top: 100px; */
+}
+
+.main .container{
+    background-color: white;
+    border-radius: 10px;
+    height: 130vh;
+
+}
+
+.head_perfil{
+    display: flex;
+    position: relative;
+    top: -90px;
+    left: 30px;
+}
+
+.head_perfil img{
+    height: 200px;
+    border-radius: 50%;
+    border: solid #d1e6fc;
+}
+
+.head_perfil h1{
+    position: relative;
+    top: 25px;
+    left: 10px;
+}
+.head_perfil h4{
+    position: relative;
+    left: 13px;
+    top: -20px;
+    color: black;
+}
+
+.body_perfil{
+    /* background-color w; */
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.body_perfil .menu_perfil{
+    width: 25%;
+    position: relative;
+    top:-30px;
+    height: 300px;
+    color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    border-right: solid black 0.4px;
+}
+
+.body_perfil .menu_perfil div{
+    padding: 15px 5px 15px 15px;
+}
+
+.box_perfil div:hover{
+    background-color: rgb(218, 229, 250);
+    cursor: pointer;
+}
+
+.body_perfil .conteudo_perfil{
+    /* background-color: rgb(233, 223, 223); */
+    width: 75%;
+    height: 300px;
+    color: black;
+}
+
+.conteudo_perfil .dados{
+    display: flex;
+    /* justify-content: center; */
+    position: relative;
+    top: -80px;
+    justify-content: space-around;
+    /* display: none; */
+    
+}
+
+.dados div{
+    margin-right: 100px;
+
+}
+
+.dados div input{
+    width: 150%;
+    padding: 7px;
+    margin: 10px 0  ;
+}
+
+.dados div select{
+    padding: 7px;
+    margin: 10px 0  ;
+    width: 110%;
+}
+
+.dados div button{
+    padding: 3px;
+    margin: 10px 0  ;
+    width: 110%;
+}
+
+.conteudo_perfil .exposicao{
+    height: 300px;
+    padding-left:50px;
+    position: relative;
+    top: -80px;
+    display: none;
+}
+
+.exposicao div input{
+    width: 40%;
+    padding: 7px;
+    margin: 10px 0  ;
+}
+
+.exposicao div select{
+    padding: 7px;
+    margin: 10px 0  ;
+    width: 42%;
+}
+
+.exposicao div button{
+    padding: 3px;
+    margin: 10px 0  ;
+    width: 40%;
+}
+
+.rede_social{
+    width: 20% !important;
+    margin-top: 30px !important;
+}
+
+.upload_foto{
+    background-image: url('https://visualpharm.com/assets/654/Add%20Camera-595b40b85ba036ed117dbeab.svg');
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 250px;
+    width: 250px;
+    float: right;
+    left: -100px;
+    top: 25px;
+    border: solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload_foto:hover{
+    background-color: rgba(240, 238, 238, 0.815);
+    
+}
+
+.upload_foto_galeria{
+    background-image: url('https://visualpharm.com/assets/654/Add%20Camera-595b40b85ba036ed117dbeab.svg');
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border: solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    
+    cursor: pointer;
+}
+
+.upload_foto_galeria h5{
+    margin: 0;
+}
+
+.upload_foto_galeria:hover{
+    background-color: rgba(240, 238, 238, 0.815);
+    
+}

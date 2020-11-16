@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="container">
+            <h3>Yuimaru</h3>
+            <a href="./index.html">Home</a>
+
+            <a href="./Navegar.html" style="float: right;">Sair</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="head_perfil">
+                <img src="./Imagens/Destaque/satoru saito perfil.jpg" alt="">
+
+                <div>
+                    <h1>Satoru Saito</h1><br>
+                    <h4>SP-São Paulo</h4>
+                </div>
+            </div>
+
+            <div class="body_perfil">
+                <div class="menu_perfil">
+                    <div class="box_perfil">
+                        <div id="btn_perfil" style=" background-color: rgb(218, 229, 250);" onclick="mostrar_perfil()">
+                            <i class="far fa-user"></i> Perfil
+                        </div>
+
+                        <div id="btn_exposicao" onclick="mostrar_exposicao()">
+                            <i class="far fa-id-card"></i> Página de Exposição
+                        </div>
+
+                        <div>
+                            <i class="far fa-envelope"></i> Mensagens
+                        </div>
+
+                        <div>
+                            <i class="fas fa-cogs"></i> Configurações
+                        </div>
+
+                        <div>
+                            <i class="far fa-question-circle"></i> Ajuda
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conteudo_perfil">
+                    <div class="dados" id="dados_perfil">
+                        <div>
+                            <h2>Perfil</h2>
+                            Nome: <br> <input type="text" placeholder="Satoru"> <br>
+
+                            Sobrenome: <br> <input type="text" placeholder="Saito"> <br>
+
+                            Email:<br> <input type="email" placeholder="Satoru.Saito@gmail.com"><br>
+
+                            Estado: <br> <select name="" id="">
+                                <option value="">SP</option>
+                                <option value="">AC</option>
+                                <option value="">AL</option>
+                                <option value="">AP</option>
+                                <option value="">AM</option>
+                                <option value="">BA</option>
+                                <option value="">CE</option>
+                                <option value="">DF</option>
+                                <option value="">ES</option>
+                                <option value="">GO</option>
+                                <option value="">MA</option>
+                                <option value="">MT</option>
+                                <option value="">MS</option>
+                                <option value="">MG</option>
+                                <option value="">PA</option>
+                                <option value="">PB</option>
+                                <option value="">PR</option>
+                                <option value="">PE</option>
+                                <option value="">PI</option>
+                                <option value="">RJ</option>
+                                <option value="">RN</option>
+                                <option value="">RS</option>
+                                <option value="">RO</option>
+                                <option value="">RR</option>
+                                <option value="">SC</option>
+                                <option value="">SE</option>
+                                <option value="">TO</option>
+                            </select> <br>
+                            Cidade: <br> <input type="text" placeholder="São Paulo">
+                        </div>
+
+
+                        <div>
+                            <h2 style="color: white;">Perfil</h2>
+
+                            Bairro: <br> <input type="text" placeholder="Saito"> <br>
+
+                            Logradouro:<br> <input><br>
+
+                            Telefone: <br> <input> <br>
+
+                            <button>Salvar</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="exposicao" id="dados_exposicao">
+                        <h2>Página de exposição</h2>
+
+                        <div>
+                            <div class="upload_foto">
+                                <h2>Adicionar foto +</h2>
+
+                            </div>
+
+                            <span>
+                                Nome comercial: <br>
+                            </span>
+
+                            <input type="text" placeholder="Saito"> <br>
+
+
+                            <span>
+                                Categoria: <br>
+                            </span>
+
+                            <select name="" id="">
+                                <option value="0">-- Selecione uma categoria --</option>
+                                <option value="bingata">Bingata</option>
+                                <option value="eisa">Eisa</option>
+                                <option value="koto">Koto</option>
+                                <option value="odori">Odori</option>
+                                <option value="sanshin">Sanshin</option>
+                            </select>
+                            <br>
+
+                            <span>
+                                Subategoria: <br>
+                            </span>
+
+                            <select name="" id="">
+                                <option value="0">-- Selecione uma subcategoria --</option>
+                                <option value="Aulas particulares">Aulas particulares</option>
+                                <option value="Escola de dança">Escola de dança</option>
+                                <option value="Venda de instrumentos">Venda de instrumentos</option>
+                                <option value="Manutenção de instrumentos">Manutenção de instrumentos</option>
+                                <option value="Venda de artesanatos">Venda de artesanatos</option>
+                                <option value="Venda de acessórios">Venda de acessórios</option>
+                                <option value="Grupo">Grupo</option>
+                            </select>
+                            <br>
+
+                            <span>
+                                Descrição: <br>
+                            </span>
+
+                            <input> <br>
+
+                            <i class="fab fa-facebook"></i> <input class="rede_social" type="text">
+
+                            <i class="fab fa-whatsapp"></i> <input type="text" class="rede_social">
+
+                            <i class="fab fa-instagram"></i> <input type="text" class="rede_social">
+
+                            <h4>Galeria</h4>
+
+                            <div class="upload_foto_galeria">
+                                <h5>Adicionar foto +</h5>
+
+                            </div>
+
+                            <div style="display: flex;justify-content: center;">
+                                <button>Salvar</button>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrar_perfil() {
+
+        btn_perfil.style='background-color:rgb(218, 229, 250);'
+        btn_exposicao.style='background-color:white;'
+
+        document.getElementById('dados_perfil').style.display = 'flex';
+        document.getElementById('dados_exposicao').style.display = 'none';
+
+    }
+
+    function mostrar_exposicao() {
+        btn_perfil.style='background-color:white;'
+        btn_exposicao.style='background-color:rgb(218, 229, 250);'
+
+        document.getElementById('dados_perfil').style.display = 'none';
+        document.getElementById('dados_exposicao').style.display = 'block';
+
+    }
+
+
+
+
+</script>
