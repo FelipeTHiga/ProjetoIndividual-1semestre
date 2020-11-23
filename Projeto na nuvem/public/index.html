@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuimaru</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="container">
+            <h3>Yuimaru</h3>
+            <a href="./index.html">Home</a>
+            <a href="">Notícias</a>
+            <a href='#section_banner' onclick="cadastro()">Cadastro</a>
+            <a href="./Navegar.html" onclick="direcionar(this.id)" id="categoria0">Navegar</a>
+
+            <div class="login">
+
+                <a href="#section_banner'" style="float: right;" onclick="entrar_display()">Entrar</a>
+
+                <div class="login_popup" id="div_login">
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+
+                        <input type="email" name="email" id="" placeholder="Email"> <i class="fas fa-user"></i>
+                        <br><br>
+                        <input type="password" name="senha" id="" placeholder="Senha"> <i class="fas fa-lock"></i>
+                        <br>
+
+                        <button id="btn_entrar">Entrar</button>
+                        <u>Esqueceu sua senha?</u>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="search_bar">
+                <select name="" id="">
+                    <option value="">Todos</option>
+                    <option value="">Sanshin</option>
+                    <option value="">Koto</option>
+                    <option value="">Bingata</option>
+                    <option value="">Odori</option>
+                </select>
+                <input type="text" name="" id="in_pesquisa" placeholder="Pesquisar...">
+                <button class="search_button"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="blur" id="main" onclick="close_popup()">
+        <!-- Banner -->
+        <section id="section_banner">
+
+            <div class="banner">
+                <div class="container">
+
+
+                    <div id="txt_banner">
+                        <h1>Crie, ensine e compartilhe.</h1>
+                        <h2>A plataforma para divulgação de <br>produtos e serviços</h2>
+                    </div>
+
+                    <div class="cadastro" id="div_cadastro">
+                        <form action="" id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
+                            <span class="X_cadastro" onclick="fechar_cadastro()">
+                                <i class="fas fa-times"></i>
+                            </span>
+
+                            <h2><i class="fas fa-user-plus"></i> Cadastro</h2>
+
+                            <hr class="borda" style=" background-color: white; height: 1px;">
+
+                            <div class="icones_cadastro">
+
+
+                                <div class="campos_cadastro">
+                                    <i class="fas fa-user"></i><input type="text" name="nome_cadastro" id="in_nome"
+                                        placeholder="Nome" required minlength="4"> <br>
+
+                                    <i class="fas fa-envelope"> </i>
+                                    <input type="email" name="email_cadastro" id="in_email" placeholder="Email" required
+                                        minlength="4">
+                                    <br>
+
+                                    <i class="fas fa-mobile-alt"> </i> <input type="text" name="celular_cadastro" id="in_celular"
+                                        placeholder="Celular" required minlength="8">
+                                    <br>
+
+                                    <i class="fas fa-lock"> </i> <input type="password" name="senha_cadastro" id="in_senha"
+                                        placeholder="Senha" required minlength="4">
+
+                                    <div id="div_confirmar"
+                                        style="text-align: center; margin-left: 70px; color: rgb(2, 182, 2); display: none;">
+                                        <b>Cadastro efetivado!</b>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <button class='btn_cadastrar' id="btn_cadastrar" type="submit"
+                                value="Cadastrar">Cadastrar</button>
+                        </form>
+                        <div class="cadastro_txt">
+                            <h1>Faça parte da comunidade!</h1>
+                            <h2>A utilização da plataforma e todos os seus serviços é 100% gratuita!
+                            </h2>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Categorias -->
+        <!-- Título -->
+
+        <div style="background-color: white;">
+
+            <div class="container">
+
+                <div class="categorias_titulo">
+                    <div class="flex45">
+                        <hr class="borda" style="margin-right:10px">
+
+                    </div>
+
+                    <div class="flex10">
+
+                        <h1>Categorias</h1>
+                    </div>
+
+
+                    <div class="flex45">
+                        <hr class="borda" style="margin-left:10px">
+
+                    </div>
+                </div>
+
+
+
+                <div class="display_flex">
+                    <!-- // ID das divs de cada categoria (./Navegar.html)
+                    categoria0 - Todos
+                    categoria1 - koto
+                    categoria2 - Sanshin
+                    categoria3 - Eisa
+                    categoria4 - Odori
+                    categoria5 - Bingata -->
+
+
+
+                    <!-- Koto -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/koto2.jpg);"
+                            onclick="direcionar(this.id)" id="categoria1">
+
+                            <div class="circuloOverlay">
+                                <span>Koto</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O koto de Okinawa é um instrumento de 13 cordas tocado principalmente em peças mais
+                                tradicionais.
+
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone koto.png" alt="" class="icone" id="icon_koto">
+                        </div>
+
+                    </div>
+                    <!-- Bingata -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/bingata.jpg);"
+                            onclick="direcionar(this.id)" id="categoria5">
+
+                            <div class="circuloOverlay">
+                                <span>Bingata</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O bingata é uma técnica tradicional para o tingimento de kimonos.
+
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone"
+                                id="icon_bingata">
+                        </div>
+                    </div>
+
+                    <!-- Odori  -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/odori2.jpg);"
+                            onclick="direcionar(this.id)" id="categoria4">
+
+                            <div class="circuloOverlay">
+                                <span>Odori</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                Odori são danças tradicionais que misturam movimentos, música<br> e significado.
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone" id="icon_odori">
+                            <img src="./Imagens/Categorias/Icones/icone odori.png" alt="" class="icone"
+                                id="icon_odori2">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Sanshin  -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/sanshin.jpg);"
+                            onclick="direcionar(this.id)" id="categoria2">
+
+                            <div class="circuloOverlay">
+                                <span>Sanshin</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O sanshin é o instrumento caracteristíco de Okinawa, esta presente em grande parte das
+                                músicas
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone sanshin.png" alt="" class="icone"
+                                id="icon_sanshin">
+                        </div>
+
+                    </div>
+
+                    <!-- Eisa  -->
+                    <div class="categoria">
+
+                        <div class="circulo" style="background-image:url(./Imagens/Categorias/eisa.jpg);"
+                            onclick="direcionar(this.id)" id="categoria3">
+
+                            <div class="circuloOverlay">
+                                <span>Eisa</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <span>
+                                O eisa é uma dança tradicional com tambores, taiko, acompanhada de melodias <br> do
+                                sanshin.
+                            </span>
+
+                            <img src="./Imagens/Categorias/Icones/icone eisa.png" alt="" class="icone" id="icon_eisa">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container" style="margin-bottom: 50px;">
+
+                <hr class="borda">
+
+            </div>
+        </div>
+
+
+
+        <!-- Destaques -->
+
+        <div class="div_destaques">
+
+            <div class="destaque_titulo">
+                <div class="flex45">
+                    <hr class="borda" style="margin-right:10px; background-color: #7dacdb;">
+
+                </div>
+
+                <div class="flex10">
+
+                    <h1>Destaques</h1>
+                </div>
+
+                <div class="flex45">
+                    <hr class="borda" style="margin-left:10px;background-color: #7dacdb;">
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="div_cardD">
+                    <div class="cardDestaque" onclick="open_popup()">
+                        <img src="./Imagens/Destaque/sanshinshop.jpg">
+
+                        <span>Sanshin Shop</span>
+                        <h4>Venda de instrumentos</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/koto.jpg" alt="">
+
+                        <span>Akiko Oshiro</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/taiko.jpg" alt="">
+
+                        <span>Taiko Center</span>
+                        <h4>Venda de instrumentos</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/bingata.jpg" alt="">
+
+                        <span>Aho Studio</span>
+                        <h4>Venda de artesanatos</h4>
+
+                    </div>
+
+                    <div class="cardDestaque">
+                        <img src="./Imagens/Destaque/sanshinclass.jpg" alt="">
+
+                        <span>Luiz Chibana</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+                </div>
+                <hr class="borda" style="background-color: #7dacdb; align-self: center;">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="patrocinadores">
+
+            <h1>Patrocinadores: </h1>
+
+            <div>
+                <img src="./Imagens/Patrocinadores/oniguiri.jpg" alt="">
+            </div>
+
+            <div>
+                <img src="./Imagens/Patrocinadores/aokb.png" alt="">
+            </div>
+
+            <div>
+                <img src="./Imagens/Patrocinadores/okinalar.png" alt="">
+            </div>
+            <div>
+                <img src="./Imagens/Patrocinadores/utinastore.jpg" alt="">
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+
+                <div class="desc">
+                    <h3> Yuimaru</h3>
+                    <p> Uma plataforma gratuita para divulgar, descobrir e aprender.</p>
+
+                    <img src="./Imagens/Banner/shisapinkpng.png" style="height: 100px">
+
+                </div>
+
+                <div class="desc">
+                    <h3>Contato</h3>
+
+                    <p>
+                        <b>Telefone</b><br>
+                        (11)-94823-4029 <br> <br>
+
+
+                        <b>Email</b> <br>
+                        yuimaru_contato@gmail.com <br> <br>
+
+
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"> </i>
+                        <i class="fab fa-youtube"> </i>
+                    </p>
+                </div>
+
+                <div class="desc">
+                    <h3 style="margin-bottom: 12px;">Deixe sua sugestão</h3>
+                    <form>
+                        <input type="text" placeholder="Digite seu email"> <br> <br>
+                        <input type="text" style="height: 70px;"> <br>
+                        <button type="submit"> Enviar </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" id="div_popup">
+        <div class="popup">
+
+
+            <div class="popup_content">
+
+
+                <div class="popup_titulo">
+                    <h1>
+                        Sanshin Shop
+                    </h1>
+                    <h4>
+                        Venda de instrumentos
+                    </h4>
+
+                    <h5 style="width:250px;text-align: justify; ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Cras fermentum odio eu feugiat pretium nibh. Nulla malesuada
+                        pellentesque elit eget gravida cum. Est sit amet facilisis magna etiam tempor orci eu
+                        lobortis. Laoreet non curabitur gravida arcu. Dui vivamus arcu felis bibendum ut tristique
+                        et egestas quis. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
+                    </h5>
+                </div>
+                <div class="popup_imgPerfil">
+                    <img src="./Imagens/Destaque/sanshinshop.jpg">
+                </div>
+
+                <div class="contato">
+                    <div class="rede">
+                        <h2><i class="fab fa-facebook"></i> Sanshinshop</h2>
+                    </div>
+
+                    <div class="rede">
+                        <h2><i class="fab fa-whatsapp"></i> (11)94655-8476</h2>
+                    </div>
+
+                    <div class="rede">
+                        <h2><i class="fab fa-instagram"></i> Sanshin_shop</h2>
+                    </div>
+                </div>
+
+                <h1 style="color: black; float: left; padding-left: 50px; width: 100%;text-align: left;">Galeria:</h1>
+
+                <div class="galeria">
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Sanshin/sanshin1.jpg" alt="">
+                    </div>
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Sanshin/sanshin5.jpg" alt="">
+                    </div>
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Sanshin/sanshin6.jpg" alt="">
+                    </div>
+
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Sanshin/sanshin2.jpg" alt="">
+                    </div>
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Sanshin/sanshin3.jpg" alt="">
+                    </div>
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Sanshin/sanshin4.jpg" alt="">
+                    </div>
+
+                </div>
+
+                <h1
+                    style="color: black; float: left; padding-left: 50px; width: 100%;text-align: left; margin-top: 50px; ">
+                    Contate:</h1>
+
+                <div class="mensagem">
+
+
+                    <div>
+                        Email: <br>
+                        <input type="email" placeholder="Seu Email"> <br><br>
+                        Nome: <br>
+                        <input type="text" placeholder="Seu nome"> <br><br>
+                        <input type="text" class="recado" placeholder="Sua mensagem...">
+
+                        <button>Enviar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    var delay = 0
+    var ativo = 0
+
+    function cadastro() {
+        txt_banner.style.transition = "0.5s"
+        txt_banner.style.opacity = 0
+        div_cadastro.style.opacity = 1
+    }
+
+    function fechar_cadastro() {
+        txt_banner.style.transition = " ease-in 0.5s"
+        txt_banner.style.opacity = 1
+        div_cadastro.style.opacity = 0
+
+    }
+
+    function entrar_display() {
+        if (ativo == 0) {
+            document.getElementById('div_login').style = 'height: 130px; padding: 8px 0; visibility: visible;';
+            document.getElementById('form_login').style = 'opacity:1';
+            ativo = 1
+        }
+
+        else {
+            document.getElementById('div_login').style = 'height: 0; padding: 0 0; visibility: hidden;';
+            document.getElementById('form_login').style = 'opacity:0; transition: 0.3s;';
+            ativo = 0
+        }
+    }
+
+
+    function open_popup() {
+
+        main.style.filter = 'blur(5px)';
+        div_popup.style.display = 'block';
+
+        setTimeout(function () {
+            delay = 1
+        }, 500)
+    }
+
+    function close_popup() {
+
+
+        if (delay == 1) {
+            main.style.filter = 'blur(0)';
+            div_popup.style.display = 'none';
+            delay = 0
+        }
+    }
+
+    function direcionar(clicked_id) {
+        localStorage.exibir = clicked_id
+        window.location = "./Navegar.html"
+
+
+    }
+
+
+
+    // Validação de login
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.email_usuario_meuapp = json.email;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    sessionStorage.celular_usuario_meuapp = json.celular;
+
+                    window.location.href = 'Perfil.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        // img_aguarde.style.visibility = 'visible';
+        // div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        // img_aguarde.style.visibility = 'hidden';
+        // div_erro.style.visibility = 'visible';
+        // div_erro.innerHTML = resposta;
+    }
+
+    // Cadastro de usuario
+
+    function cadastrar() {
+        aguardar_cadastro();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+                in_nome.value=""
+                in_email.value=""
+                in_celular.value=""
+                in_senha.value=""
+
+                // window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar_cadastro();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar_cadastro() {
+        btn_cadastrar.disabled = true;
+        // img_aguarde.style.display='block';
+        div_confirmar.style.display = 'none';
+    }
+
+    function finalizar_aguardar_cadastro() {
+        btn_cadastrar.disabled = false;
+        // img_aguarde.style.display='none';
+        div_confirmar.style.display = 'block';
+    }
+
+
+</script>

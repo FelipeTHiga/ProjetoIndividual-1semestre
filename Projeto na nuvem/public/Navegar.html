@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yumaru-Categorias</title>
+    <link rel="stylesheet" href="Navegar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h3>Yuimaru</h3>
+            <a href="./index.html">Home</a>
+            <a href="">Notícias</a>
+            <a href='#section_banner' onclick="cadastro()">Cadastro</a>
+            <a href="">Navegar</a>
+            <a href="" style="float: right;">Entrar</a>
+
+            <div class="search_bar">
+                <select name="" id="">
+                    <option value="">Todos</option>
+                    <option value="">Sanshin</option>
+                    <option value="">Koto</option>
+                    <option value="">Bingata</option>
+                    <option value="">Odori</option>
+                </select>
+                <input type="text" name="" id="in_pesquisa" placeholder="Pesquisar...">
+                <button class="search_button"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="categoria">
+        <div class="container">
+            <div class="card" onclick="card_ativo(this.id)" id="categoria0">
+                <a href="javascript:void(0)">Todos</a>
+            </div>
+
+            <div class="card" onclick="card_ativo(this.id)" id="categoria1">
+                <a href="javascript:void(0)">Koto</a>
+            </div>
+
+            <div class="card" onclick="card_ativo(this.id)" id="categoria2">
+                <a href="javascript:void(0)">Sanshin</a>
+            </div>
+
+            <div class="card" onclick="card_ativo(this.id)" id="categoria3">
+                <a href="javascript:void(0)">Eisa</a>
+            </div>
+
+            
+            <div class="card" onclick="card_ativo(this.id)" id="categoria4">
+                <a href="javascript:void(0)">Odori</a>
+            </div>
+            
+            <div class="card" onclick="card_ativo(this.id)" id="categoria5">
+                <a href="javascript:void(0)">Bingata</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="container">
+            <div class="perfil">
+
+                <!-- Seção koto -->
+                <div class="section" id="section1">
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/koto.jpg" alt="">
+
+                        <span>Akiko Oshiro</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/kotoAcessorio.jpg" alt="">
+
+                        <span>Koto Store</span>
+                        <h4>Venda de acessórios</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/kotoManutenção.jpg" alt="">
+
+                        <span>Antonio Kamiya</span>
+                        <h4>Manutenção & Venda de instrumentos</h4>
+
+                    </div>
+                </div>
+
+                <!-- Seção sanshin -->
+                <div class="section" id="section2">
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/sanshinshop.jpg">
+
+                        <span>Sanshin Shop</span>
+                        <h4>Venda de instrumentos</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/sanshinclass.jpg" alt="">
+
+                        <span>Luiz Uehara</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+
+                </div>
+
+                <!-- Seção eisa -->
+                <div class="section" id="section3">
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/taiko.jpg" alt="">
+
+                        <span>Taiko Center</span>
+                        <h4>Venda de instrumentos</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/Kariyushi Daiko.jpg" alt="">
+
+                        <span>Naha Eisa Daiko</span>
+                        <h4>Grupo</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/eisa.jpg" alt="">
+
+                        <span>Jose Yamauchi</span>
+                        <h4>Manutenção & Venda de instrumentos</h4>
+
+                    </div>
+                </div>
+
+                <!-- Seção Odori -->
+                <div class="section" id="section4">
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/odori.jpg" alt="">
+
+                        <span style="font-size: 18px;">Shiroma Kazue Ryubu Dojo</span>
+                        <h4>Escola de Dança</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/Saito Satoru Ryubu Dojo.jpg" alt="">
+
+                        <span style="font-size: 18px;"> Saito Satoru Ryubu Dojo</span>
+                        <h4>Escola de Dança</h4>
+
+                    </div>
+                </div>
+
+                <!-- Seção Bingata -->
+                <div class="section" id="section5">
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/bingata.jpg" alt="">
+
+                        <span>Carla Aho</span>
+                        <h4>Venda de artesanatos</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/bingataStudio.jpg" alt="">
+
+                        <span>Chiburu Studio</span>
+                        <h4>Escola de Arte</h4>
+
+                    </div>
+
+                    <div class="card_perfil">
+                        <img src="./Imagens/Destaque/bingataStudio2.jpg" alt="">
+
+                        <span>Andreia Chinen</span>
+                        <h4>Aulas particulares</h4>
+
+                    </div>
+                </div>
+
+
+                <div class="page">
+
+                    <h2> <i class="fas fa-less-than"></i> <a href=""> 1 </a><i class="fas fa-greater-than"></i></h2>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+
+            <div class="desc">
+                <h3> Yuimaru</h3>
+                <p> Uma plataforma gratuita para divulgar, descobrir e aprender.</p>
+
+                <img src="./Imagens/Banner/shisapinkpng.png" style="height: 100px">
+
+            </div>
+
+            <div class="desc">
+                <h3>Contato</h3>
+
+                <p>
+                    <b>Telefone</b><br>
+                    (11)-94823-4029 <br> <br>
+
+
+                    <b>Email</b> <br>
+                    yuimaru_contato@gmail.com <br> <br>
+
+
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"> </i>
+                    <i class="fab fa-youtube"> </i>
+                </p>
+            </div>
+
+            <div class="desc">
+                <h3 style="margin-bottom: 12px;">Deixe sua sugestão</h3>
+                <form>
+                    <input type="text" placeholder="Digite seu email"> <br> <br>
+                    <input type="text" style="height: 70px;"> <br>
+                    <button type="submit"> Enviar </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var ativo = 0
+    var jaEntrou = 1
+
+    
+    function card_ativo(clicked_id) {
+            // ID das divs de cada categoria
+            // categoria0 - Todos
+            // categoria1 - koto
+            // categoria2 - Sanshin
+            // categoria3 - Eisa
+            // categoria4 - Odori
+            // categoria5 - Bingata
+
+
+        for (var contador = 0; contador < 6; contador++) {
+            document.getElementById(`categoria${contador}`).style.backgroundColor = 'rgba(255, 251, 251, 0.329)'
+        }
+        
+        if (jaEntrou == 1){
+            document.getElementById(ativo).style.backgroundColor = '#9a9cffb5'
+            jaEntrou=0
+        } 
+        else {
+            ativo = `${clicked_id}`
+            document.getElementById(ativo).style.backgroundColor = '#9a9cffb5'
+        }
+
+   
+        
+        
+
+        for (var contador = 1; contador < 6; contador++) {
+            document.getElementById(`section${contador}`).style.display = 'none'
+        }
+
+    
+        for (var exibir = 0; exibir < 6; exibir++) {
+            
+
+
+            if (ativo == 'categoria0') {
+
+                for (var contador = 1; contador < 6; contador++) {
+                    document.getElementById(`section${contador}`).style.display = 'flex'
+                }
+
+            }
+
+            else if (ativo == `categoria${exibir}`) {
+                document.getElementById(`section${exibir}`).style.display = 'flex'
+            }
+        }
+    }
+
+    function verficiarCategoria(){
+        ativo = localStorage.exibir
+
+        console.log(ativo);
+
+        card_ativo();
+
+    }
+
+    window.onload = verficiarCategoria;
+
+</script>
