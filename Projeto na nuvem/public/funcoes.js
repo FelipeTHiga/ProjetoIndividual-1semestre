@@ -2,6 +2,7 @@ let email_usuario;
 let nome_usuario;
 let celular_usuario;
 let login_usuario;
+let id_usuario
 
 function redirecionar_login() {
     window.location.href = 'index.html';
@@ -12,7 +13,7 @@ function verificar_autenticacao() {
     nome_usuario = sessionStorage.nome_usuario_meuapp;
     celular_usuario = sessionStorage.celular_usuario_meuapp;
     login_usuario = sessionStorage.login_usuario_meuapp;
-
+    id_usuario = sessionStorage.id_usuario_meuapp;
 
     if (email_usuario == undefined)  {
         // redirecionar_login();

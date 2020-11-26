@@ -1,0 +1,331 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.ativo{
+    border-bottom: solid #f78fdd;
+    background-color: #2d84db;
+}
+.navbar{
+    align-content: center;
+    height: 50px;
+    /* position: fixed; */
+    width: 100%;
+    background-color: #7dacdb;
+    z-index: 10;
+}
+.navbar a {
+    float: left;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+
+.container{
+   
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.container h3{
+    float: left;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 30px;
+    margin-right: 50px;
+    font-family: 'Gochi Hand', cursive;
+    
+    
+}
+
+
+.borda{
+    width:68%;
+    height: 5px;
+    /* margin-top: 20px; */
+    background-color: #f78fdd;  
+    border-radius: 35px;
+    border: 0;
+    margin: 0;
+    margin-left: 20px;
+    }
+
+/* Seção */
+.secao_titulo{
+    display: flex;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+/* Login */
+.login{
+    position: relative;
+    float: right;
+}
+
+.login_popup{
+    visibility: hidden;
+    height: 0;
+    width: 230px;
+    background-color:  white;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0 0;
+    position: relative;
+    z-index: 1;
+    top: 45px;
+    right: 20px;
+    margin-left: -80px;
+    transition: 0.7s;
+    box-shadow: -2px 5px 15px -3px rgba(0,0,0,0.7);
+    border-bottom: 10px solid #7dacdb;
+    color: #7dacdb;
+}
+
+
+
+.login .login_popup::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: 70px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent  white transparent;
+}
+
+.login_popup u{
+    color: #7dacdb;
+    font-size: 14px;
+}
+
+
+.login_popup form{
+    position: relative;
+    bottom: 30px;
+    opacity: 0;
+    transition: ease-in 1s;
+}
+.login_popup input{
+    background-color:rgb(255, 255, 255);
+    color: #7dacdb;
+    border-radius: 5px;
+    height: 25px;
+    border: 2px solid;
+}
+
+.login_popup button{
+    background-color: #f78fdd;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 50px;
+    padding: 5px 5px 5px 5px;
+
+}
+
+
+/* Banner */
+
+.banner{
+    height: 500px;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.inner_banner{
+    height:500px;
+    width: 500px;
+    /* background-color: violet; */
+    margin: 2px;
+}
+
+#banner_left{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.781)),url(./Imagens/Noticias/shurijo.jpg);
+    background-size: 100% 100%;
+    transition: 0.5s;
+}
+#banner_left:hover{
+    background-size: 105% 105%;
+    cursor: pointer;
+}
+
+#banner_left h2{
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 400px;
+}
+#banner_left h5{
+    margin-left: 30px;
+    margin-top: 0;
+}
+
+
+#banner_right{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inner_banner_right{
+    height: 250px;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    
+    background-repeat: no-repeat;
+}
+
+#news_right{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.479)),url(./Imagens/Noticias/shochikubai.jpg);
+    background-size: 100% 130%;
+    transition: 0.5s;
+}
+#news_right:hover{
+    background-size: 105% 135%;
+    cursor: pointer;
+}
+
+#news_right h2{
+    margin-left: 20px;
+    margin-top: 200px;
+}
+
+.deep_inner_right{
+    margin-top: 4px;
+    height: 246px;
+    margin-right: 2px;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: 00.5s;
+}
+.deep_inner_right:hover{
+    background-size: 105% 105%;
+    cursor: pointer;
+}
+
+
+
+.deep_inner_right h4{
+    margin-top: 200px;
+    margin-left: 15px;
+    font-size: 14px;
+
+}
+
+#div_sobaday{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.74)),url(./Imagens/Noticias/./soba.jpg)
+}
+
+#div_uchinanchunohi{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.74)),url(./Imagens/Noticias/./uchinachunohi.jpg)
+}
+
+/* Materias */
+.subcontainer{
+   
+    color: white;
+    width: 74%;
+    margin: 0 auto;
+    
+}
+
+.div_materias{
+    /* background-color: #f78fdd; */
+    height: 300px;
+    display: flex;
+}
+
+.card_materia{
+    width: 300px;
+    height: 250px;
+    background-color: blue;
+    margin: 3px;
+    background-size: 100% 100%;
+    transition: 0.5s;
+}
+.card_materia:hover{
+    background-size: 105% 105%;
+    cursor: pointer;
+}
+
+
+.card_materia h4{
+    margin-left: 10px;
+    margin-top: 170px;
+}
+.card_materia h6{
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+
+#materia_buyo{
+    background-image: linear-gradient(rgba(29, 3, 3, 0), rgba(0, 0, 0, 0.685)),url(./Imagens/Noticias/satoru.jpg);
+}
+#materia_guerra{
+    background-image: linear-gradient(rgba(29, 3, 3, 0), rgba(0, 0, 0, 0.644)),url(./Imagens/Noticias/batalhaOk.jpg);
+}
+#materia_obon{
+    background-image: linear-gradient(rgba(29, 3, 3, 0), rgba(0, 0, 0, 0.616)),url(./Imagens/Noticias/obon.jpg);
+}
+#materia_covid{
+    background-image: linear-gradient(rgba(29, 3, 3, 0), rgba(0, 0, 0, 0.651)),url(./Imagens/Noticias/covid\ .jpg);
+}
+
+/* Footer */
+
+.footer{
+    background-color: #7dacdb;
+    height: 230px;
+    border-top:10px solid;
+    border-color: #f78fdd ;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer .desc{
+    padding-top: 20px;
+    width: 33%;
+    text-align: center;
+
+}
+
+.desc h3{
+    float: none;
+    margin: 0;
+    /* text-align: left; */
+}
+
+.desc button{
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 5px;
+
+}

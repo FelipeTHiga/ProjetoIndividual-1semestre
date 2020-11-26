@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuimaru</title>
+    <link rel="stylesheet" href="./noticias_estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="container">
+            <h3>Yuimaru</h3>
+            <a href="./index.html">Home</a>
+            <a href="./noticias.html" class="ativo" >Notícias</a>
+            <a href='./index.html#section_banner' onclick="cadastro()">Cadastro</a>
+            <a href="./Navegar.html" onclick="direcionar(this.id)" id="categoria0">Navegar</a>
+
+            <div class="login">
+
+                <a href="#section_banner'" style="float: right;" onclick="entrar_display()">Entrar</a>
+
+                <div class="login_popup" id="div_login">
+
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+
+
+                        <input type="email" name="email" id="" placeholder="Email"> <i class="fas fa-user"></i>
+                        <br><br>
+                        <input type="password" name="senha" id="" placeholder="Senha"> <i class="fas fa-lock"></i>
+                        <br>
+
+                        <button id="btn_entrar">Entrar</button>
+                        <u>Esqueceu sua senha?</u> <br>
+
+                        <u style="color: red; visibility: hidden; font-size: 13px; transition: 0.4;" id="msg_erro">Login
+                            e/ou senha inválido(s)</u>
+                        <div style="position: relative; top: -20px ;">
+                            <img src="./Imagens/Infra/loading.gif" alt="" style="visibility:hidden ;height: 50px;"
+                                id="img_aguarde">
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 50px;">
+
+        <div class="secao_titulo">
+
+            <h1 style="color: #7dacdb;">Destaques</h1>
+            <hr class="borda">
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="banner">
+
+            <div class="inner_banner" id="banner_left">
+                <h2>Um ano após o incendio no <br> castelo Shurijo </h2>
+                <h5>Felipe Higa - 31 de outubro, 2020</h5>
+
+            </div>
+
+
+
+            <div class="inner_banner" id="banner_right">
+                <div class="inner_banner_right" id="news_right">
+                    <h2>Shochikubai, o significado da dança</h2>
+                </div>
+
+
+                <div class="inner_banner_right">
+                    <div class="deep_inner_right" id="div_uchinanchunohi">
+                        <h4>Comemoração em live do dia do uchinachu</h4>
+
+
+                    </div>
+
+                    <div class="deep_inner_right" id="div_sobaday">
+                        <h4> Seinen promove evento delivery de Okinawa Soba</h4>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container" style="margin-top: 50px;">
+
+        <div class="secao_titulo">
+
+            <h1 style="color: #7dacdb;">Matérias</h1>
+            <hr class="borda">
+
+        </div>
+
+    </div>
+
+    <div class="subcontainer">
+
+        <div class="div_materias">
+            <div class="card_materia" id="materia_buyo">
+                <h4>Entrevista com o mestre Satoru Saito</h4>
+                <h6>Felipe Higa - 10 de outubro</h6>
+            </div>
+
+            <div class="card_materia" id="materia_guerra">
+                <h4>A batalha de Okinawa e suas consequências</h4>
+                <h6>Felipe Higa - 15 de outubro</h6>
+            </div>
+
+            <div class="card_materia" id="materia_covid">
+                <h4>Como a quarentena afetou a comunidade okinawana</h4>
+                <h6>Felipe Higa - 09 de novembro</h6>
+            </div>
+
+            <div class="card_materia" id="materia_obon">
+                <h4>Obon, a importância antepassados</h4>
+                <h6>Felipe Higa - 31 de julho</h6>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="footer" style="margin-top: 100px;">
+        <div class="container">
+
+            <div class="desc">
+                <h3> Yuimaru</h3>
+                <p> Uma plataforma gratuita para divulgar, descobrir e aprender.</p>
+
+                <img src="./Imagens/Banner/shisapinkpng.png" style="height: 100px">
+
+            </div>
+
+            <div class="desc">
+                <h3>Contato</h3>
+
+                <p>
+                    <b>Telefone</b><br>
+                    (11)-94823-4029 <br> <br>
+
+
+                    <b>Email</b> <br>
+                    yuimaru_contato@gmail.com <br> <br>
+
+
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"> </i>
+                    <i class="fab fa-youtube"> </i>
+                </p>
+            </div>
+
+            <div class="desc">
+                <h3 style="margin-bottom: 12px;">Deixe sua sugestão</h3>
+                <form>
+                    <input type="text" placeholder="Digite seu email"> <br> <br>
+                    <input type="text" style="height: 70px;"> <br>
+                    <button type="submit"> Enviar </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

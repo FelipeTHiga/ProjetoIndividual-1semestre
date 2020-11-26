@@ -19,16 +19,17 @@
 
     verificar_autenticacao();
 
-    
+
 </script>
-<body  onload="verificar_autenticacao()">
+
+<body onload="verificar_autenticacao()">
 
     <div class="navbar">
         <div class="container">
             <h3>Yuimaru</h3>
             <a href="./index.html">Home</a>
 
-            <a href="./Navegar.html" style="float: right;" onclick="logoff()">Sair</a>
+            <a href="./index.html" style="float: right;" onclick="logoff()">Sair</a>
         </div>
     </div>
     </div>
@@ -77,10 +78,10 @@
 
                             <!-- Sobrenome: <br> <input type="text" placeholder="Saito"> <br> -->
 
-                            Email:<br> <input type="email" id="in_email" ><br>
+                            Email:<br> <input type="email" id="in_email"><br>
 
                             Telefone: <br> <input id="in_celular"> <br>
-                            Estado: <br> <select name="" id="">
+                            <!-- Estado: <br> <select name="" id="">
                                 <option value="">SP</option>
                                 <option value="">AC</option>
                                 <option value="">AL</option>
@@ -108,23 +109,23 @@
                                 <option value="">SC</option>
                                 <option value="">SE</option>
                                 <option value="">TO</option>
-                            </select> <br>
-
+                            </select> <br> -->
+                            <button>Salvar</button>
                         </div>
 
 
                         <div>
                             <h2 style="color: white;">Perfil</h2>
 
-                            Cidade: <br> <input type="text" placeholder="São Paulo">
+                            <!-- Cidade: <br> <input type="text" placeholder="São Paulo">
 
                             Bairro: <br> <input type="text"> <br>
 
-                            Logradouro:<br> <input><br>
+                            Logradouro:<br> <input><br> -->
 
-                            
 
-                            <button>Salvar</button>
+
+
 
                         </div>
 
@@ -132,87 +133,89 @@
 
                     <div class="exposicao" id="dados_exposicao">
                         <h2>Página de exposição</h2>
+                        <form action="" id="form_exposicao" method="post" onsubmit="return salvar()">
 
-                        <div>
-                            <div class="upload_foto">
-                                <h2>Adicionar foto +</h2>
+                            <div>
+                                <div class="upload_foto">
+                                    <h2>Adicionar foto +</h2>
 
-                            </div>
+                                </div>
 
-                            <span>
-                                Nome comercial: <br>
-                            </span>
+                                <span>
+                                    Nome comercial: <br>
+                                </span>
 
-                            <input type="text" placeholder=""> <br>
-
-
-                            <span>
-                                Categoria: <br>
-                            </span>
-
-                            <select name="" id="">
-                                <option value="">-- Selecione uma categoria --</option>
-                                <option value="bingata">Bingata</option>
-                                <option value="eisa">Eisa</option>
-                                <option value="koto">Koto</option>
-                                <option value="odori">Odori</option>
-                                <option value="sanshin">Sanshin</option>
-                            </select>
-                            <br>
-
-                            <span>
-                                Subategoria: <br>
-                            </span>
-
-                            <select name="" id="">
-                                <option value="">-- Selecione uma subcategoria --</option>
-                                <option value="Aulas particulares">Aulas particulares</option>
-                                <option value="Escola de dança">Escola de dança</option>
-                                <option value="Venda de instrumentos">Venda de instrumentos</option>
-                                <option value="Manutenção de instrumentos">Manutenção de instrumentos</option>
-                                <option value="Venda de artesanatos">Venda de artesanatos</option>
-                                <option value="Venda de acessórios">Venda de acessórios</option>
-                                <option value="Grupo">Grupo</option>
-                            </select>
-                            <br>
-
-                            <span>
-                                Descrição: <br>
-                            </span>
-
-                            <input> <br>
-
-                            <i class="fab fa-facebook"></i> <input class="rede_social" type="text">
-
-                            <i class="fab fa-whatsapp"></i> <input type="text" class="rede_social">
-
-                            <i class="fab fa-instagram"></i> <input type="text" class="rede_social">
-
-                            <h4>Galeria</h4>
-
-                            <div class="upload_foto_galeria">
-                                <h5>Adicionar foto +</h5>
-
-                            </div>
-
-                            <div style="display: flex;justify-content: center;">
-                                <button>Salvar</button>
-                            </div>
-
-                        </div>
+                                <input type="text" placeholder="" name="nome_comercial"> <br>
 
 
+                                <span>
+                                    Categoria: <br>
+                                </span>
 
+                                <select name="categoria" >
+                                    <option value="">-- Selecione uma categoria --</option>
+                                    <option value="bingata">Bingata</option>
+                                    <option value="eisa">Eisa</option>
+                                    <option value="koto">Koto</option>
+                                    <option value="odori">Odori</option>
+                                    <option value="sanshin">Sanshin</option>
+                                </select>
+                                <br>
+
+                                <span>
+                                    Subategoria: <br>
+                                </span>
+
+                                <select name="subcategoria" >
+                                    <option value="">-- Selecione uma subcategoria --</option>
+                                    <option value="Aulas particulares">Aulas particulares</option>
+                                    <option value="Escola de dança">Escola de dança</option>
+                                    <option value="Venda de instrumentos">Venda de instrumentos</option>
+                                    <option value="Manutenção de instrumentos">Manutenção de instrumentos</option>
+                                    <option value="Venda de artesanatos">Venda de artesanatos</option>
+                                    <option value="Venda de acessórios">Venda de acessórios</option>
+                                    <option value="Grupo">Grupo</option>
+                                </select>
+                                <br>
+
+                                <span>
+                                    Descrição: <br>
+                                </span>
+
+                                <input> <br>
+
+                                <i class="fab fa-facebook"></i> <input class="rede_social" type="text" name="facebook">
+
+                                <i class="fab fa-whatsapp"></i> <input type="text" class="rede_social" name="whatsapp">
+
+                                <i class="fab fa-instagram"></i> <input type="text" class="rede_social" name="instagram">
+
+                                <h4>Galeria</h4>
+
+                                <div class="upload_foto_galeria">
+                                    <h5>Adicionar foto +</h5>
+
+                                </div>
+
+                                <div style="display: flex;justify-content: center;">
+                                    <button type="submit">Salvar</button>
+                                </div>
+
+                        </form>
                     </div>
 
 
 
-
-
                 </div>
-            </div>
 
+
+
+
+
+            </div>
         </div>
+
+    </div>
     </div>
 
 
@@ -227,8 +230,8 @@
 
     function mostrar_perfil() {
 
-        btn_perfil.style='background-color:rgb(218, 229, 250);'
-        btn_exposicao.style='background-color:white;'
+        btn_perfil.style = 'background-color:rgb(218, 229, 250);'
+        btn_exposicao.style = 'background-color:white;'
 
         document.getElementById('dados_perfil').style.display = 'flex';
         document.getElementById('dados_exposicao').style.display = 'none';
@@ -236,14 +239,54 @@
     }
 
     function mostrar_exposicao() {
-        btn_perfil.style='background-color:white;'
-        btn_exposicao.style='background-color:rgb(218, 229, 250);'
+        btn_perfil.style = 'background-color:white;'
+        btn_exposicao.style = 'background-color:rgb(218, 229, 250);'
 
         document.getElementById('dados_perfil').style.display = 'none';
         document.getElementById('dados_exposicao').style.display = 'block';
 
     }
 
+
+    function salvar() {
+        // aguardar_cadastro();
+        var formulario = new URLSearchParams(new FormData(form_exposicao));
+        fetch("/usuarios/salvar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+        
+                // div_confirmar.style.display = 'block'
+    
+                alert('Dados Salvos')
+
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    // div_confirmar.innerHTML = resposta;
+                });
+                // finalizar_aguardar_cadastro();
+            }
+        });
+
+        return false;
+    }
+
+    // function aguardar_cadastro() {
+    //     btn_cadastrar.disabled = true;
+    //     // img_aguarde.style.display='block';
+    //     div_confirmar.style.display = 'none';
+    // }
+
+    // function finalizar_aguardar_cadastro() {
+    //     btn_cadastrar.disabled = false;
+    //     // img_aguarde.style.display='none';
+    //     div_confirmar.style.display = 'block';
+    // }
 
 
 

@@ -3,6 +3,11 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.ativo{
+    border-bottom: solid #f78fdd;
+    background-color: #2d84db;
+}
+
 .navbar{
     align-content: center;
     height: 50px;
