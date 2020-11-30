@@ -18,7 +18,7 @@
     <div class="navbar">
         <div class="container">
             <h3>Yuimaru</h3>
-            <a href="./index.html" class="ativo">Home</a>
+            <a href="./index.html">Home</a>
             <a href="./noticias.html">Notícias</a>
             <a href='#section_banner' onclick="cadastro()">Cadastro</a>
             <a href="./Navegar.html" onclick="direcionar(this.id)" id="categoria0">Navegar</a>
@@ -219,7 +219,7 @@
 
                             </span>
 
-                            <img src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone"
+                            <img  src="./Imagens/Categorias/Icones/icone bingata.png" alt="" class="icone"
                                 id="icon_bingata">
                         </div>
                     </div>
@@ -357,7 +357,7 @@
 
                     </div>
 
-                    <div class="cardDestaque">
+                    <div class="cardDestaque" onclick="open_popup_bingata()">
                         <img src="./Imagens/Destaque/bingata.jpg" alt="">
 
                         <span>Aho Studio</span>
@@ -383,7 +383,7 @@
 
         <div class="patrocinadores">
 
-            <h1>Patrocinadores: </h1>
+            <h1>Apoiadores: </h1>
 
             <div>
                 <img src="./Imagens/Patrocinadores/oniguiri.jpg" alt="">
@@ -451,11 +451,7 @@
 
     <div class="container" id="div_popup">
         <div class="popup">
-
-
             <div class="popup_content">
-
-
                 <div class="popup_titulo">
                     <h1>
                         Sanshin Shop
@@ -523,14 +519,14 @@
 
 
                     <div>
-                        <form form action="" id="form_mensagem" method="post" onsubmit="return mensagem()">
+                        <form form action="" id="form_mensagem" method="post" onsubmit="return mensagem(form_mensagem)">
 
                             Email: <br>
-                            <input type="email" placeholder="Seu Email" name="email_mensagem" > <br><br>
+                            <input type="email" placeholder="Seu Email" name="email_mensagem"> <br><br>
                             Nome: <br>
                             <input type="text" placeholder="Seu nome" name="nome_mensagem"> <br><br>
                             <input type="text" class="recado" placeholder="Sua mensagem..." name="corpo_mensagem">
-
+                            <input type="hidden" name="fkusuario" value=1>
                             <button type="submit">Enviar</button>
                         </form>
                     </div>
@@ -540,6 +536,84 @@
         </div>
     </div>
 
+    <div class="container" id="div_popup_bingata">
+        <div class="popup">
+            <div class="popup_content">
+                <div class="popup_titulo">
+                    <h1>
+                        Aho Studio
+                    </h1>
+                    <h4>
+                        Venda de artesanatos
+                    </h4>
+
+                    <h5 style="width:250px;text-align: justify; ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Cras fermentum odio eu feugiat pretium nibh. Nulla malesuada
+                        pellentesque elit eget gravida cum. Est sit amet facilisis magna etiam tempor orci eu
+                        lobortis. Laoreet non curabitur gravida arcu. Dui vivamus arcu felis bibendum ut tristique
+                        et egestas quis. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
+                    </h5>
+                </div>
+                <div class="popup_imgPerfil">
+                    <img src='./Imagens/Destaque/bingata.jpg' style= 'width: 400px;'>
+                </div>
+
+                <div class="contato">
+                    <div class="rede">
+                        <h2><i class="fab fa-facebook"></i> AhoStudio</h2>
+                    </div>
+
+                    <div class="rede">
+                        <h2><i class="fab fa-whatsapp"></i> (11)94655-8476</h2>
+                    </div>
+
+                    <div class="rede">
+                        <h2><i class="fab fa-instagram"></i> @AhoStudio</h2>
+                    </div>
+                </div>
+
+                <h1 style="color: black; float: left; padding-left: 50px; width: 100%;text-align: left;">Galeria:</h1>
+
+                <div class="galeria">
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Bingata/bingata1.png" alt="">
+                    </div>
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Bingata/bingata2.png" alt="">
+                    </div>
+                    <div class="img_galeria">
+                        <img src="./Imagens/Galeria/Bingata/bingata3.jpg" alt="">
+                    </div>
+
+                </div>
+
+                <h1
+                    style="color: black; float: left; padding-left: 50px; width: 100%;text-align: left; margin-top: 50px; ">
+                    Contate:</h1>
+
+                <div class="mensagem">
+
+
+                    <div>
+                        <form form action="" id="form_mensagem_bingata" method="post" onsubmit="return mensagem(form_mensagem_bingata)">
+
+                            Email: <br>
+                            <input type="email" placeholder="Seu Email" name="email_mensagem"> <br><br>
+                            Nome: <br>
+                            <input type="text" placeholder="Seu nome" name="nome_mensagem"> <br><br>
+                            <input type="text" class="recado" placeholder="Sua mensagem..." name="corpo_mensagem">
+                            <input type="hidden" name="fkusuario" value=2>
+
+                
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
@@ -579,9 +653,9 @@
         }
     }
 
-
+    // PopUps
     function open_popup() {
-
+        localStorage.id_usuario = 1
         main.style.filter = 'blur(5px)';
         div_popup.style.display = 'block';
 
@@ -596,15 +670,26 @@
         if (delay == 1) {
             main.style.filter = 'blur(0)';
             div_popup.style.display = 'none';
+            div_popup_bingata.style.display = 'none';
             delay = 0
         }
     }
 
+    function open_popup_bingata() {
+        localStorage.id_usuario = 2
+        main.style.filter = 'blur(5px)';
+        div_popup_bingata.style.display = 'block';
+
+        setTimeout(function () {
+            delay = 1
+        }, 500)
+    }
+
+
+
     function direcionar(clicked_id) {
         localStorage.exibir = clicked_id
         window.location = "./Navegar.html"
-
-
     }
 
 
@@ -613,7 +698,9 @@
 
     function entrar() {
         aguardar();
+
         var formulario = new URLSearchParams(new FormData(form_login));
+        
         fetch("/usuarios/autenticar", {
             method: "POST",
             body: formulario
@@ -708,12 +795,15 @@
     }
 
 
-    function mensagem() {
+    function mensagem(form_usuario_id) {
         // aguardar_cadastro();
-        var formulario = new URLSearchParams(new FormData(form_mensagem));
+        
+
+        var formulario = new URLSearchParams(new FormData(form_usuario_id));
         fetch("/usuarios/enviar", {
             method: "POST",
             body: formulario
+
         }).then(function (response) {
 
             if (response.ok) {

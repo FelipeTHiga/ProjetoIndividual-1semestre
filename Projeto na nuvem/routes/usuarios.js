@@ -7,8 +7,7 @@ var Exposicao = require('../models').Exposicao;
 
 
 let sessoes = [];
-// let fk_usuario
-// fk_usuario = sessionStorage.id_usuario_meuapp;
+
 
 /* Recuperar usuário por email e senha */
 router.post('/autenticar', function(req, res, next) {
@@ -31,8 +30,10 @@ router.post('/autenticar', function(req, res, next) {
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
 			res.status(403).send('Login e/ou senha inválido(s)');
+
 		} else {
 			res.status(403).send('Mais de um usuário com o mesmo email e senha!');
+			
 		}
 
 	}).catch(erro => {
@@ -63,12 +64,11 @@ router.post('/cadastrar', function(req, res, next) {
 /* Enviar mensagem */
 router.post('/enviar', function(req, res, next) {
 	console.log('Enviando uma mensagem');
-	
 	Mensagem.create({
 		nome : req.body.nome_mensagem,
 		emailRemetente: req.body.email_mensagem,
 		mensagem: req.body.corpo_mensagem,
-		fkusuario: 1,
+		fkusuario: req.body.fkusuario,
 
 	}).then(recado => {
 		console.log(`Registro criado: ${recado}`)
@@ -94,10 +94,10 @@ router.post('/salvar', function(req, res, next) {
 		instagram: req.body.instagram,
 		whatsapp: req.body.whatsapp,
 		descricao: req.body.descricao,
-		fkUsuario: fk_usuario,
+		fkUsuario: req.body.fkusuario,
 
 	}).then(dados => {
-		console.log(`Registro criado: ${dados}`)
+		console.log(`Registro criado: ${dados}`);
         res.send(dados);
     }).catch(erro => {
 		console.error(erro);

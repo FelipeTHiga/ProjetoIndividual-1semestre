@@ -19,7 +19,7 @@
         <div class="container">
             <h3>Yuimaru</h3>
             <a href="./index.html">Home</a>
-            <a href="./noticias.html" class="ativo" >Notícias</a>
+            <a href="./noticias.html" class="ativo">Notícias</a>
             <a href='./index.html#section_banner' onclick="cadastro()">Cadastro</a>
             <a href="./Navegar.html" onclick="direcionar(this.id)" id="categoria0">Navegar</a>
 
@@ -143,8 +143,70 @@
 
     </div>
 
+    <div class="container" style="margin-top: 50px;">
+
+        <div class="secao_titulo">
+
+            <h1 style="color: #7dacdb;">Notícias</h1>
+            <hr class="borda">
+
+        </div>
+
+    </div>
 
 
+    <div class="subcontainer">
+        <div class="grid">
+
+
+            <div class="div_noticias">
+                <div class="card_noticia">
+                    <img src="./Imagens/Noticias/worldwide.jpg" class="card_noticia_img">
+                    <h2>Festival Mundial de Eisa agendado para 20 de dezembro</h2>
+                </div>
+
+                <div class="card_noticia">
+                    <img src="./Imagens/Noticias/niseta.jpg" class="card_noticia_img">
+                    <h2>Niseta tour 2020, intercâbio cultural será sediado no Brasil</h2>
+                </div>
+
+                <div class="card_noticia">
+                    <img src="./Imagens/Noticias/bolsa.jpg" class="card_noticia_img">
+                    <h2>Live aborda a possibilidade de estudar em Okinwa</h2>
+                </div>
+
+                <div class="card_noticia">
+                    <img src="./Imagens/Noticias/danca.jpg" class="card_noticia_img">
+                    <h2>Show Chibaryo Uchiná bate recorde de público</h2>
+                </div>
+            </div>
+
+
+            <div class="div_noticias">
+                <div class="card_propaganda">
+
+                    <div class="swipe" onclick="voltar_img()" ><i class="fas fa-less-than"></i></div>
+
+                    <img src="./Imagens/Noticias/Carrossel/produtos.jpg" alt="" id="img_carrossel">
+                    
+                    <div class="swipe" onclick="avancar_img()"><i class="fas fa-greater-than"></i></div>
+
+                </div>
+
+                <div class="card_noticia">
+                    <img src="./Imagens/Noticias/fireshuri.jpg" class="card_noticia_img">
+                    <h2>Incendio no castelo de Shurijo destrói patrimonio histórico e simbolo de Okinawa</h2>
+                </div>
+
+                <div class="card_noticia">
+                    <img src="./Imagens/Noticias/hy.jpg" class="card_noticia_img">
+                    <h2>Banda HY confirma vinda para o Brasil</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="footer" style="margin-top: 100px;">
         <div class="container">
@@ -192,3 +254,49 @@
 </body>
 
 </html>
+
+<script>
+    var imagens_carrossel=['almofadas.jpg','bingata.jpg','chaveiros.jpg','produtos.jpg']
+    var contador_img = 0
+
+    function start_carrossel(){
+        setInterval(function () {
+            avancar_img()
+        }, 2000)
+
+    }
+
+    function avancar_img(){
+       
+        if(contador_img<3){
+            contador_img ++
+         
+            document.getElementById('img_carrossel').src=`./Imagens/Noticias/Carrossel/${imagens_carrossel[contador_img]}`
+        }   
+        else {
+            contador_img = 0
+            document.getElementById('img_carrossel').src=`./Imagens/Noticias/Carrossel/${imagens_carrossel[contador_img]}`
+        }
+
+      
+    }
+    
+    function voltar_img(){
+
+       if(contador_img>0){
+        contador_img --
+        document.getElementById('img_carrossel').src=`./Imagens/Noticias/Carrossel/${imagens_carrossel[contador_img]}`
+
+       } else{
+
+        contador_img=3
+        document.getElementById('img_carrossel').src=`./Imagens/Noticias/Carrossel/${imagens_carrossel[contador_img]}`
+
+       }
+
+    }
+
+    window.onload=start_carrossel()
+
+
+</script>

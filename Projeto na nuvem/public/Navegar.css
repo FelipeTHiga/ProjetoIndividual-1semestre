@@ -115,7 +115,7 @@ body{
 
 .categoria{
     padding: 50px 0;
-    background-color:  rgba(255, 255, 255, 0.795);
+    background-color:  #b7d2eca6;
     width: 100%;
     height: 10px;
     z-index: 9;
@@ -126,6 +126,7 @@ body{
     /* padding-top: 20px; */
     display: flex;
     width: 70%;
+    /* border: solid 1px #7dacdb; */
 }
 
 .categoria a{
@@ -139,12 +140,13 @@ body{
 
 .card{
     width: 20%;
-    background-color: rgba(255, 255, 255, 0.329);
+    background-color: rgb(255, 255, 255);
     text-align: center;
     height: 30px;
     padding: 15px 0;
-    border-left: solid 1px ;
-    border-right: solid 1px ;
+    /* border-left: solid 1px #7dacdb; */
+    /* border-right: solid 1px #7dacdb; */
+    /* border-bottom: solid 3px #7dacdb; */
     cursor: pointer;
     transition: 0.4s;
 }
@@ -159,7 +161,8 @@ body{
 .main{
     margin: 0px 0;
     display: flex;
-    background-image: url(./Imagens/Banner/banner1.png);
+    /* background-image: url(./Imagens/Banner/banner1.png); */
+    background-color: #b7d2eca6;
     background-size: cover;
     background-attachment: fixed;
     z-index: 10;
@@ -169,6 +172,7 @@ body{
 .main .container{
     display: flex;
     width: 70%;
+    background-color: white;
 }
 
 

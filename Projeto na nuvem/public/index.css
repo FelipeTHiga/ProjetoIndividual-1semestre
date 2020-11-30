@@ -566,6 +566,10 @@ height: 500px;
     display: none;
 }
 
+#div_popup_bingata{
+    display: none;
+}
+
 .popup{
     position: fixed;
     top:50%;

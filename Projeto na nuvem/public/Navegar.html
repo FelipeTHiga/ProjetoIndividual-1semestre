@@ -246,16 +246,17 @@
                 </form>
             </div>
 
-        </div>
+        </div> 
     </div>
 
+    <span style="color: rgba(255, 251, 251, 0.329);"></span>
 
 </body>
 
 </html>
 <script>
     var ativo = 0
-    var jaEntrou = 1
+    var jaClicou = false
 
     
     function card_ativo(clicked_id) {
@@ -266,34 +267,34 @@
             // categoria3 - Eisa
             // categoria4 - Odori
             // categoria5 - Bingata
-
+        
 
         for (var contador = 0; contador < 6; contador++) {
             document.getElementById(`categoria${contador}`).style.backgroundColor = 'rgba(255, 251, 251, 0.329)'
         }
         
-        if (jaEntrou == 1){
+        //Verifica se o usuario já entrou na página,
+        //Se selecionou alguma categoria, se não, o card ativo será o valor armazenado no localStorage
+        //Se sim, o valor de ativo passa a ser o id da categoria clicada
+        if (jaClicou == false){
             document.getElementById(ativo).style.backgroundColor = '#9a9cffb5'
-            jaEntrou=0
+            jaClicou=true
         } 
         else {
             ativo = `${clicked_id}`
             document.getElementById(ativo).style.backgroundColor = '#9a9cffb5'
         }
 
-   
-        
-        
 
+        //loop para ocultar todas as divs de categoria
         for (var contador = 1; contador < 6; contador++) {
             document.getElementById(`section${contador}`).style.display = 'none'
         }
 
     
+        // Repete todos os valores possíveis para o id das categorias
         for (var exibir = 0; exibir < 6; exibir++) {
-            
-
-
+            // Se o id ativo for igual a categoria0 (todos) todas as categorias serão exibidas
             if (ativo == 'categoria0') {
 
                 for (var contador = 1; contador < 6; contador++) {

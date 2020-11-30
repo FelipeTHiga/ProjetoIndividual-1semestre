@@ -2,18 +2,25 @@ let email_usuario;
 let nome_usuario;
 let celular_usuario;
 let login_usuario;
-let id_usuario
+let fkusuario;
 
 function redirecionar_login() {
     window.location.href = 'index.html';
 }
 
+// function atribuir_id(){
+//     var id_usuario = sessionStorage.id_usuario_meuapp;
+//     alert(id_usuario)
+//     exports.id_usuario=id_usuario
+// }
+
+ 
 function verificar_autenticacao() {
     email_usuario = sessionStorage.email_usuario_meuapp;
     nome_usuario = sessionStorage.nome_usuario_meuapp;
     celular_usuario = sessionStorage.celular_usuario_meuapp;
     login_usuario = sessionStorage.login_usuario_meuapp;
-    id_usuario = sessionStorage.id_usuario_meuapp;
+    fkusuario = sessionStorage.id_usuario_meuapp ;
 
     if (email_usuario == undefined)  {
         // redirecionar_login();
@@ -22,7 +29,7 @@ function verificar_autenticacao() {
         in_nome.value = nome_usuario;
         in_celular.value = celular_usuario;
         in_email.value=email_usuario;
-
+        hidden_fkusuario.value=fkusuario;
         validar_sessao();
     }
     
@@ -51,3 +58,4 @@ function validar_sessao() {
 function finalizar_sessao() {
     fetch(`/usuarios/sair/${email_usuario}`, {cache:'no-store'}); 
 }
+
